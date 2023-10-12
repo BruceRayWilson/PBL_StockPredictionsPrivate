@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime
 import pandas as pd
+import sys
 
 from StockSymbolCollection.StockSymbolCollection import StockSymbolCollection
 from StockData.StockData import StockData
@@ -75,29 +76,35 @@ def menu(args) -> None:
     """
     Displays a menu for users who run the script without CLI arguments
     """
-    print("1. Stock Symbol Verification")
-    print("2. Stock Data Collection")
-    print("3. Stock Preprocessor")
-    print("4. LLM")
-    print("   4.1 LLM Training")
-    print("   4.2 LLM Prediction")
+    while True:
+        print("1. Stock Symbol Verification")
+        print("2. Stock Data Collection")
+        print("3. Stock Preprocessor")
+        print("4. LLM")
+        print("   4.1 LLM Training")
+        print("   4.2 LLM Prediction")
+        print("Q. Quit")
 
-    choice = input("Choose an option: ")
-    if choice == '1':
-        csv_filename = 'train_base.csv'
-        StockSymbolCollection.exec(csv_filename)
-    elif choice == '2':
-        start_time = datetime.strptime(args.start_time, '%Y-%m-%d')
-        end_time   = datetime.strptime(args.end_time,   '%Y-%m-%d')
-        StockData.exec(args.train_filename, start_time, end_time)
-    elif choice == '3':
-        StockPreprocessor.exec()
-    elif choice == '4':
-        subchoice = input("   Choose an option (1 or 2): ")
-        if subchoice == '1':
-            LLM.train()
-        elif subchoice == '2':
-            LLM.predict()
+        choice = input("Choose an option (1-4, Q to quit): ")
+
+        if choice.upper() == 'Q':
+            print("Exiting the program.")
+            sys.exit(0)
+        elif choice == '1':
+            csv_filename = 'train_base.csv'
+            StockSymbolCollection.exec(csv_filename)
+        elif choice == '2':
+            start_time = datetime.strptime(args.start_time, '%Y-%m-%d')
+            end_time   = datetime.strptime(args.end_time,   '%Y-%m-%d')
+            StockData.exec(args.train_filename, start_time, end_time)
+        elif choice == '3':
+            StockPreprocessor.exec()
+        elif choice == '4':
+            subchoice = input("   Choose an option (1 or 2): ")
+            if subchoice == '1':
+                LLM.train()
+            elif subchoice == '2':
+                LLM.predict()
 
 if __name__ == "__main__":
     main()
