@@ -8,6 +8,7 @@ import sys
 from StockSymbolCollection.StockSymbolCollection import StockSymbolCollection
 from StockData.StockData import StockData
 from StockPreprocessor.StockPreprocessor import StockPreprocessor
+from StockDNA.StockDNA import StockDNA
 
 
 class LLM:
@@ -23,6 +24,8 @@ class LLM:
         '''Runs LLM prediction. Prints a success message as of now.'''
         print("LLM predicting...")
 
+
+import argparse
 
 def add_args():
     """Function to add command line arguments"""
@@ -41,6 +44,7 @@ def add_args():
     parser.add_argument("-et", "--end_time", default="2023-10-01",
                         help="End time for StockData in the format YYYY-MM-DD (default: %(default)s)")
     parser.add_argument("-pp", "--preprocess", action='store_true', help="Execute StockPreprocessor (default: %(default)s)")
+    parser.add_argument("-sdna", "--stock_dna", action='store_true', help="Execute Stock DNA (default: %(default)s)")  # Add this line
     parser.add_argument("-train", action='store_true', help="Execute LLM training (default: %(default)s)")
     parser.add_argument("-predict", action='store_true', help="Execute LLM prediction (default: %(default)s)")
 
@@ -64,6 +68,8 @@ def main() -> None:
             StockData.exec(args.train_filename, start_time, end_time)
         if args.preprocess:
             StockPreprocessor.exec()
+        if args.stock_dna:
+            StockDNA.exec(StockPreprocessor.get_chunk_size())
         if args.train:
             LLM.train()
         if args.predict:
@@ -80,12 +86,13 @@ def menu(args) -> None:
         print("1. Stock Symbol Verification")
         print("2. Stock Data Collection")
         print("3. Stock Preprocessor")
-        print("4. LLM")
-        print("   4.1 LLM Training")
-        print("   4.2 LLM Prediction")
+        print("4. Stock DNA")
+        print("5. LLM")
+        print("   5.1 LLM Training")
+        print("   5.2 LLM Prediction")
         print("Q. Quit")
 
-        choice = input("Choose an option (1-4, Q to quit): ")
+        choice = input("Choose an option (1-5, Q to quit): ")
 
         if choice.upper() == 'Q':
             print("Exiting the program.")
@@ -100,11 +107,14 @@ def menu(args) -> None:
         elif choice == '3':
             StockPreprocessor.exec()
         elif choice == '4':
+            StockDNA.exec(StockPreprocessor.get_chunk_size())
+        elif choice == '5':
             subchoice = input("   Choose an option (1 or 2): ")
             if subchoice == '1':
                 LLM.train()
             elif subchoice == '2':
                 LLM.predict()
+
 
 if __name__ == "__main__":
     main()

@@ -8,6 +8,18 @@ class StockPreprocessor:
         self.output_directory = 'preprocessed_data'
         self.chunk_size = 42
 
+    @classmethod
+    def get_input_directory(cls):
+        return cls.input_directory
+
+    @classmethod
+    def get_output_directory(cls):
+        return cls.output_directory
+
+    @classmethod
+    def get_chunk_size(cls):
+        return 42
+    
     def create_output_directory(self):
         if not os.path.exists(self.output_directory):
             os.makedirs(self.output_directory)
