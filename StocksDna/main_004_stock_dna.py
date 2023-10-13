@@ -17,16 +17,6 @@ config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST")
 
 llm_config = {"config_list": config_list, "seed": 42}
 
-#
-#
-# Save this and switch to Group chat.
-# Add an Arichitect Agent
-# User=always
-# What else was there?
-# Control who can execute code.  See IndeDevDan.
-# See IndeDevDan for function calls.
-#
-#
 
 # create an AssistantAgent named "assistant"
 assistant = autogen.AssistantAgent(
@@ -51,41 +41,53 @@ user_proxy = autogen.UserProxyAgent(
 
 message = """
 # Mission
-You are to architect a class to preprocess already collected stock market data.
+You are to architect a class to process data that has already been preprocessed for stock market data.
 
 # Context
 This is to be part of a script to use an LLM for stock predictions.
 The LLM functionality will be implemented later.
 Stock symbol validation has been implemented.
 Stock data collection has been implemented.
+Stock data preprocessing has been implemented.
 This needs to be done to perform changes to the stock data.
-Additionally, the stock data will be converted to words.
+The stock data will needs to be converted to words.
 
 # Rules
-Use the class name StockPreprocessor.
+Use the class name StockDna.
 Create all necessary methods.
 
 # Instructions
 Start with the following code:
-class StockPreprocessor:
-    # Class to preprocess collected stock market data
+class StockDna:
+    # Class to process collected stock market data
 
     @staticmethod
     def exec() -> None:
         '''The method just prints a success message as of now'''
-        print("Preprocessing data...")
+        print("Processing data...")
 
 
 You are allowed to create additional classes if you deem it necessary.
 
-For every stock symbol, use 42 day chunks at a time.  There is to be no overlap between each chunk.
-Normalize the fields Open,High,Low,Close chunk by chunk.  Do this across all four fields.  Not individually.
-Normalize the Volume field chunk by chunk.
+Chunk size is to be retrieved from StockPreprocessor.chunk_size.
+
+For every stock symbol, use chunk size chunks at a time.  
+
+Create a class variable for number of days and set it to 10.
+
+Verify that the number of days is a multiple of chunk size.
+Within each chunk, bin Open,High,Low,Close,Tomorrow_Close into 5 bins.
+Change the data such that bin 1 is 'a', bin 2 is 'b', bin 3 is 'c', etc.
+
+Within each chunk, bin Volume into 5 bins.
+Change the data such that bin 1 is 'a', bin 2 is 'b', bin 3 is 'c', etc.
+
+Save the processed data to the directory './processed_data'.
+
 
 # Expected Input
-Use the CSV files in 'data' directory.  These files contain the stock data.
+Use the CSV files in the 'preprocess_data' directory.  These files contain the stock data.
 Each file contains a line containing a header.
-Keep the fields Date,Open,High,Low,Close,Volume.
 The base of the CSV files are the names of the stock symbol.
 Each line represents one day.
 
