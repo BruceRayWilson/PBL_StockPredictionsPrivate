@@ -69,7 +69,7 @@ def main() -> None:
         if args.preprocess:
             StockPreprocessor.exec()
         if args.stock_dna:
-            StockDNA.exec(StockPreprocessor.get_chunk_size())
+            StockDNA.exec(StockPreprocessor.chunk_size)
         if args.train:
             LLM.train()
         if args.predict:
