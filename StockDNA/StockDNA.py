@@ -15,12 +15,20 @@ class StockDNA:
 
         # Process each CSV file
         for csv_file in csv_files:
-            StockDNA.process_csv_file(csv_file, chunk_size)
+            stock_symbol = StockDNA.get_stock_symbol(csv_file)
+            StockDNA.process_csv_file(stock_symbol, chunk_size)
 
         print("Data processing completed.")
 
     @staticmethod
-    def process_csv_file(csv_file, chunk_size):
+    def get_stock_symbol(csv_file):
+        # Extract the stock symbol from the CSV file's basename (filename without extension)
+        return os.path.splitext(os.path.basename(csv_file))[0]
+
+    @staticmethod
+    def process_csv_file(stock_symbol, chunk_size):
+        csv_file = stock_symbol + '.csv'
+
         # Read the CSV file
         df = pd.read_csv(f'./preprocessed_data/{csv_file}')
 
@@ -39,16 +47,10 @@ class StockDNA:
         # Bin 'Volume' into 5 bins and change the data
         df['Volume'] = pd.cut(df['Volume'], bins=5, labels=['a', 'b', 'c', 'd', 'e'])
 
-        # Save the processed data to the 'processed_data' directory
-        df.to_csv(f'./processed_data/{csv_file}', index=False)
+        # Save the processed data to the 'processed_data' directory with the stock symbol as the filename
+        processed_filename = f'./processed_data/{stock_symbol}.csv'
+        df.to_csv(processed_filename, index=False)
 
-# if __name__ == "__main__":
-#     chunk_size = 10
-#     StockDNA.process_csv_files(chunk_size)
-
-
-# # Get chunk size from StockPreprocessor
-# chunk_size = StockPreprocessor.chunk_size
-
-# # Process the data
-# StockDna.process_data(chunk_size)
+if __name__ == "__main__":
+    chunk_size = 10
+    StockDNA.exec(chunk_size)
