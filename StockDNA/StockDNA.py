@@ -47,9 +47,15 @@ class StockDNA:
         # Bin 'Volume' into 5 bins and change the data
         df['Volume'] = pd.cut(df['Volume'], bins=5, labels=['a', 'b', 'c', 'd', 'e'])
 
+        # Concatenate the binned columns into a new column named "word"
+        allColumns = columns_to_bin + ['Volume']
+        df['word'] = df[allColumns].apply(lambda x: ''.join(x), axis=1)
+
         # Save the processed data to the 'processed_data' directory with the stock symbol as the filename
         processed_filename = f'./processed_data/{stock_symbol}.csv'
         df.to_csv(processed_filename, index=False)
+
+        return df
 
 if __name__ == "__main__":
     chunk_size = 10
