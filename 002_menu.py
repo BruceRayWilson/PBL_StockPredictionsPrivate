@@ -107,7 +107,7 @@ def menu(args) -> None:
         elif choice == '3':
             StockPreprocessor.exec()
         elif choice == '4':
-            StockDNA.exec(StockPreprocessor.get_chunk_size())
+            StockDNA.exec(StockPreprocessor.chunk_size)
         elif choice == '5':
             subchoice = input("   Choose an option (1 or 2): ")
             if subchoice == '1':
