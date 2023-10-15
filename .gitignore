@@ -1,5 +1,6 @@
 preprocessed_data/
 processed_data/
+processed_sentences/
 data/
 
 # Byte-compiled / optimized / DLL files

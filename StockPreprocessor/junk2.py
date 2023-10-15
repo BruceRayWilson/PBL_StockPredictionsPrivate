@@ -1,22 +1,3 @@
-import os
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-
-class StockPreprocessor:
-    chunk_size = 42
-
-    def __init__(self):
-        self.input_directory = 'data'
-        self.output_directory = 'preprocessed_data'
-
-    def create_output_directory(self):
-        if not os.path.exists(self.output_directory):
-            os.makedirs(self.output_directory)
-
-    def load_csv_files(self):
-        files = [f for f in os.listdir(self.input_directory) if f.endswith('.csv')]
-        return files
-
     def preprocess_file(self, file):
         # Read CSV file
         df = pd.read_csv(os.path.join(self.input_directory, file))
@@ -55,22 +36,3 @@ class StockPreprocessor:
 
         # Save the preprocessed data to a new CSV file
         result_df.to_csv(os.path.join(self.output_directory, file), index=False)
-
-
-    def preprocess_data(self):
-        print("Preprocessing data...")
-        self.create_output_directory()
-        files = self.load_csv_files()
-
-        for file in files:
-            self.preprocess_file(file)
-
-        print("Preprocessing completed.")
-
-    @classmethod
-    def exec(cls):
-        stock_preprocessor = cls()
-        stock_preprocessor.preprocess_data()
-
-if __name__ == "__main__":
-    StockPreprocessor.exec()
