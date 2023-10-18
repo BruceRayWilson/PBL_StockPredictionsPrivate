@@ -59,7 +59,7 @@ class TrainPreparation:
         Process each file in the data directory:
         1. Categorize 'Tomorrow_Gain' using the bin values.
         2. Construct a new 'text' column.
-        3. Save the modified dataframe to the target directory.
+        3. Save the modified dataframe to the target directory without the "_sentences" suffix.
 
         Args:
             bin_values (List[float]): Bin edges for categorizing the gain values.
@@ -67,9 +67,13 @@ class TrainPreparation:
         files = os.listdir(self.data_dir)
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
+            
+            # Remove '_sentences' from filename if it exists
+            new_filename = file.replace('_sentences', '')
+            
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
             df['text'] = '### Human: ' + df['Sentence'] + ' ### Assistant: ' + df['Gain'].astype(str)
-            df.to_csv(os.path.join(self.target_dir, file), index=False)
+            df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
 
 def main() -> None:
     train_prep = TrainPreparation()
