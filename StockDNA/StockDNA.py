@@ -6,6 +6,8 @@ class StockDNA:
 
     @staticmethod
     def exec(chunk_size):
+        print("Stock DNA...")
+
         # Get a list of all CSV files in the preprocessed_data directory
         csv_files = [file for file in os.listdir('./preprocessed_data') if file.endswith('.csv')]
 
@@ -26,7 +28,7 @@ class StockDNA:
             # Save the sentences dataframe to the 'processed_sentences' directory
             sentences_df.to_csv(f'./processed_sentences/{stock_symbol}_sentences.csv', index=False)
 
-        print("Data processing completed.")
+        print("Stock DNA processing completed.")
 
     @staticmethod
     def get_stock_symbol(csv_file):

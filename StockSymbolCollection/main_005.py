@@ -163,10 +163,12 @@ class StockSymbolCollection:
         Args:
         csv_filename (str): Path to the CSV file containing stock tickers.
         """
+        print("Validating tickers...")
         collection_instance = cls(csv_filename)
         collection_instance.validate_tickers()
         collection_instance.fetch_beta_values()
         collection_instance.display_beta_values()
+        print("Done validating tickers.")
 
 if __name__ == "__main__":
     # Specify the path to your CSV file.

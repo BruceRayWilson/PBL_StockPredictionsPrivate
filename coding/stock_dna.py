@@ -15,6 +15,8 @@ class StockDna:
 
     @staticmethod
     def process_data(chunk_size):
+        print("Processing data...")
+        
         # Verify that the number of days is a multiple of chunk size
         if StockDna.num_days % chunk_size != 0:
             raise ValueError("Number of days is not a multiple of chunk size")

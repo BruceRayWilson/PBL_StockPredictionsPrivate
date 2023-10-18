@@ -69,6 +69,7 @@ class StockData:
         Returns:
             bool: Always returns True (as in the original).
         """
+        print("Processing data...")
         # # Read the stock symbols from the CSV file
         # with open(stock_symbols_path, 'r') as file:
         #     reader = csv.reader(file)
@@ -88,5 +89,6 @@ class StockData:
             # if not success:
             #     print(f'Pipeline creation failed for {symbol}')
 
+        print("Processing data completed.")
         return True
 
