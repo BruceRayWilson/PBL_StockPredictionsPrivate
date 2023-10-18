@@ -76,15 +76,9 @@ Use 'exec' as the method to call all the other methods.
 
 You are allowed to create additional classes if you deem it necessary.
 
-
 All files have the same columns which are Date,Tomorrow_Gain,Sentence.
 
-You are to read all the files and figure out how to bin Tomorrow_Gain.
-You are to bin five catagories.  The bins are in the following order from lowest to 
-highest, 'really bad', 'bad', 'average', 'great', 'excellent'.
-
-
-You are then to read the files one at a time.
+You are to bin across all files the Tomorrow_Gain column.
 Create a new column for every stock called 'Gain' that is the bin value of Tomorrow_Gain.
 Create a new column for every stock called 'text'. It is to be '### Human: ' plus Sentence plus '### Assistant: ' plus Gain.
 
@@ -97,11 +91,6 @@ Each file contains a header line.
 
 The file names are formatted as stock symbol plus '_sentences.csv'.
 Each line represents one day.
-
-Comment the codes better for others to understand the purpose of each block more intuitively.
-Type all method arguments and the return type.  Add docstrings.
-
-Add a main method to call the class.
 
 # Output Format
 Python
