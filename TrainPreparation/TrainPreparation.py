@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from typing import List
 
+# Awesome
 class TrainPreparation:
     # Default directories
     DATA_DIR: str = 'processed_sentences'
