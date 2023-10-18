@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 from typing import List
 
-# Awesome
 class TrainPreparation:
     # Default directories
     DATA_DIR: str = 'processed_sentences'
@@ -15,12 +14,14 @@ class TrainPreparation:
         self.data_dir = data_dir
         self.target_dir = target_dir
 
-    def exec(self) -> None:
+    @classmethod
+    def exec(cls) -> None:
         """Main execution method to prepare training data."""
-        self.prepare_target_dir()
-        all_gain_values = self.collect_gain_values()
-        bin_values = self.calc_bin_edges(all_gain_values)
-        self.process_files(bin_values)
+        instance = cls()  # Instantiate a new instance
+        instance.prepare_target_dir()
+        all_gain_values = instance.collect_gain_values()
+        bin_values = instance.calc_bin_edges(all_gain_values)
+        instance.process_files(bin_values)
 
     def prepare_target_dir(self) -> None:
         """Creates the target directory if it doesn't exist."""
@@ -77,8 +78,7 @@ class TrainPreparation:
             df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
 
 def main() -> None:
-    train_prep = TrainPreparation()
-    train_prep.exec()
+    TrainPreparation.exec()
 
 if __name__ == "__main__":
     main()
