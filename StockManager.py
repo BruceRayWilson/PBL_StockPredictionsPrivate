@@ -19,12 +19,52 @@ class LLM:
     def train() -> None:
         '''Trains LLM. Prints a success message as of now.'''
         print("LLM training...")
+        from datasets import load_dataset
+        from trl import SFTTrainer
+        from peft import LoraConfig
+
+
+# autotrain llm --train 
+# --project_name Test_001 
+# --model "facebook/opt-350m" 
+# --data_path master_train_data 
+# --use_peft 
+# --use_int4 
+# --learning_rate 2e-4 
+# --train_batch_size 15 
+# --num_train_epochs 3 
+# --trainer sft 
+# --model_max_length 256 
+# --block_size 256
+
+        peft_config = LoraConfig(
+            r=16,
+            lora_alpha=32,
+            lora_dropout=0.05,
+            bias='none',
+            task_type='CASUAL_LM',
+        )
+
+        # dataset = load_dataset("imdb", split="train")
+        dataset = load_dataset("master_train_data", split="train")
+        trainer = SFTTrainer(
+            "facebook/opt-350m",
+            # neftune_noise_alpha==5,
+            load_dataset==dataset,
+            dataset_text_field="text",
+            max_seq_length=128,
+            peft_config=peft_config
+        )
+        trainer.train()
 
     @staticmethod
     def predict() -> None:
         '''Runs LLM prediction. Prints a success message as of now.'''
         print("LLM predicting...")
 
+        from transformers import AutoModelForSeq2SeqLM
+
+        model = AutoModelForSeq2SeqLM("Test_001", device_map="auto")
 
 import argparse
 

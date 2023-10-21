@@ -74,7 +74,7 @@ class TrainPreparation:
             new_filename = file.replace('_sentences', '')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
-            df['text'] = '### Human: ' + df['Sentence'] + ' ### Assistant: ' + df['Gain'].astype(str)
+            df['text'] = '### Human: ' + df['Sentence'] + '\n\n### Assistant: ' + df['Gain'].astype(str) + '\n'
             df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
 
 def main() -> None:

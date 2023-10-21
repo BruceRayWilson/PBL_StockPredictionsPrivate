@@ -3,6 +3,7 @@ processed_data/
 processed_sentences/
 data/
 train_data/
+Test_001/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
