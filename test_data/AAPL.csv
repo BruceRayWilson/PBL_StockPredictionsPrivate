@@ -1,0 +1,1645 @@
+Date,Tomorrow_Gain,Sentence,Gain,text
+2022-02-09 00:00:00-05:00,0.9884001132448552,ccbbc cdcde dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea,bad,"### Human: ccbbc cdcde dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea
+
+### Assistant: bad
+"
+2022-02-10 00:00:00-05:00,0.9785875796309468,cdcde dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb,really bad,"### Human: cdcde dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb
+
+### Assistant: really bad
+"
+2022-02-11 00:00:00-05:00,1.0090219860768217,dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb,great,"### Human: dedec eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb
+
+### Assistant: great
+"
+2022-02-14 00:00:00-05:00,1.0106450959375048,eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb,great,"### Human: eeeeb eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb
+
+### Assistant: great
+"
+2022-02-15 00:00:00-05:00,1.0040733018526664,eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea,great,"### Human: eeeea eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea
+
+### Assistant: great
+"
+2022-02-16 00:00:00-05:00,0.9874291416018848,eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea,bad,"### Human: eeeeb eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea
+
+### Assistant: bad
+"
+2022-02-17 00:00:00-05:00,0.985160733931369,eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda,really bad,"### Human: eeeea eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda
+
+### Assistant: really bad
+"
+2022-02-18 00:00:00-05:00,0.9959995852805678,eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda,bad,"### Human: eeeea eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda
+
+### Assistant: bad
+"
+2022-02-22 00:00:00-05:00,0.9669567102587754,eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb,really bad,"### Human: eeeea eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb
+
+### Assistant: really bad
+"
+2022-02-23 00:00:00-05:00,1.0665880426018024,eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb,excellent,"### Human: eeeea eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb
+
+### Assistant: excellent
+"
+2022-02-24 00:00:00-05:00,1.0061646105236846,eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb abacd,great,"### Human: eeeeb eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb abacd
+
+### Assistant: great
+"
+2022-02-25 00:00:00-05:00,1.0126333717002145,eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb abacd ccccb,great,"### Human: eeddb ddddb deeea eeeea eddda dddda ccccb ccbbb abacd ccccb
+
+### Assistant: great
+"
+2022-02-28 00:00:00-05:00,0.9908925317073844,ddddb deeea eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb,bad,"### Human: ddddb deeea eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb
+
+### Assistant: bad
+"
+2022-03-01 00:00:00-05:00,1.0132003052314749,deeea eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb cccca,excellent,"### Human: deeea eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb cccca
+
+### Assistant: excellent
+"
+2022-03-02 00:00:00-05:00,0.986703831679626,eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb cccca cccda,really bad,"### Human: eeeea eddda dddda ccccb ccbbb abacd ccccb ccccb cccca cccda
+
+### Assistant: really bad
+"
+2022-03-03 00:00:00-05:00,0.9919751518017088,eddda dddda ccccb ccbbb abacd ccccb ccccb cccca cccda dddda,bad,"### Human: eddda dddda ccccb ccbbb abacd ccccb ccccb cccca cccda dddda
+
+### Assistant: bad
+"
+2022-03-04 00:00:00-05:00,0.9751469298272244,dddda ccccb ccbbb abacd ccccb ccccb cccca cccda dddda cccca,really bad,"### Human: dddda ccccb ccbbb abacd ccccb ccccb cccca cccda dddda cccca
+
+### Assistant: really bad
+"
+2022-03-07 00:00:00-05:00,0.9913108876767942,ccccb ccbbb abacd ccccb ccccb cccca cccda dddda cccca ccbbb,bad,"### Human: ccccb ccbbb abacd ccccb ccccb cccca cccda dddda cccca ccbbb
+
+### Assistant: bad
+"
+2022-03-08 00:00:00-05:00,1.0091033023259637,ccbbb abacd ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc,great,"### Human: ccbbb abacd ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc
+
+### Assistant: great
+"
+2022-03-09 00:00:00-05:00,0.9895131541336794,abacd ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb,bad,"### Human: abacd ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb
+
+### Assistant: bad
+"
+2022-03-10 00:00:00-05:00,0.97357328923553,ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb,really bad,"### Human: ccccb ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb
+
+### Assistant: really bad
+"
+2022-03-11 00:00:00-05:00,0.9945196312460914,ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab,bad,"### Human: ccccb cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab
+
+### Assistant: bad
+"
+2022-03-14 00:00:00-04:00,1.02776675023778,cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac,excellent,"### Human: cccca cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac
+
+### Assistant: excellent
+"
+2022-03-15 00:00:00-04:00,1.0161731501864135,cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab,excellent,"### Human: cccda dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab
+
+### Assistant: excellent
+"
+2022-03-16 00:00:00-04:00,1.0126725584711005,dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb,great,"### Human: dddda cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb
+
+### Assistant: great
+"
+2022-03-17 00:00:00-04:00,1.0216185990870204,cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba,excellent,"### Human: cccca ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba
+
+### Assistant: excellent
+"
+2022-03-18 00:00:00-04:00,1.0114366732236566,ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc,great,"### Human: ccbbb bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc
+
+### Assistant: great
+"
+2022-03-21 00:00:00-04:00,1.0199988697192912,bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb,excellent,"### Human: bbbbc ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb
+
+### Assistant: excellent
+"
+2022-03-22 00:00:00-04:00,1.0132150791601315,ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda,excellent,"### Human: ccbcb bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda
+
+### Assistant: excellent
+"
+2022-03-23 00:00:00-04:00,1.0175962224282975,bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb,excellent,"### Human: bbbbb bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb
+
+### Assistant: excellent
+"
+2022-03-24 00:00:00-04:00,1.0048308966776067,bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb,great,"### Human: bbaab aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb
+
+### Assistant: great
+"
+2022-03-25 00:00:00-04:00,1.0199222162458557,aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea,excellent,"### Human: aaaac aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea
+
+### Assistant: excellent
+"
+2022-03-28 00:00:00-04:00,1.0128473837856995,aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb,great,"### Human: aaaab bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb
+
+### Assistant: great
+"
+2022-03-29 00:00:00-04:00,0.9956314826885174,bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb,bad,"### Human: bbabb bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb
+
+### Assistant: bad
+"
+2022-03-30 00:00:00-04:00,0.9818376304877888,bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb,really bad,"### Human: bbbba bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb
+
+### Assistant: really bad
+"
+2022-03-31 00:00:00-04:00,1.0016089109996027,bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb,average,"### Human: bcbcc ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb
+
+### Assistant: average
+"
+2022-04-01 00:00:00-04:00,1.0221687286178545,ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea,excellent,"### Human: ccccb cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea
+
+### Assistant: excellent
+"
+2022-04-04 00:00:00-04:00,0.9862535073723592,cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea,really bad,"### Human: cdcda deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea
+
+### Assistant: really bad
+"
+2022-04-05 00:00:00-04:00,0.9969250477058476,deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea,average,"### Human: deddb eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea
+
+### Assistant: average
+"
+2022-04-06 00:00:00-04:00,1.0057256117467357,eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea,great,"### Human: eeeeb eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea
+
+### Assistant: great
+"
+2022-04-07 00:00:00-04:00,0.990161820622798,eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea,bad,"### Human: eeeea eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea
+
+### Assistant: bad
+"
+2022-04-08 00:00:00-04:00,0.9824550613711528,eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa,really bad,"### Human: eeeeb eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa
+
+### Assistant: really bad
+"
+2022-04-11 00:00:00-04:00,0.997857394350688,eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda,average,"### Human: eeeeb eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda
+
+### Assistant: average
+"
+2022-04-12 00:00:00-04:00,1.0179819255499805,eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda dddda,excellent,"### Human: eeeeb eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda dddda
+
+### Assistant: excellent
+"
+2022-04-13 00:00:00-04:00,0.96876097770725,eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda dddda dddda,really bad,"### Human: eeeeb eeeea eeeea eeeea eeeea eeeea ededa dddda dddda dddda
+
+### Assistant: really bad
+"
+2022-04-14 00:00:00-04:00,1.00701567330478,eeeea eeeea eeeea eeeea eeeea ededa dddda dddda dddda eddda,great,"### Human: eeeea eeeea eeeea eeeea eeeea ededa dddda dddda dddda eddda
+
+### Assistant: great
+"
+2022-04-18 00:00:00-04:00,1.0144224309926322,eeeea eeeea eeeea eeeea ededa dddda dddda dddda eddda dddda,excellent,"### Human: eeeea eeeea eeeea eeeea ededa dddda dddda dddda eddda dddda
+
+### Assistant: excellent
+"
+2022-04-19 00:00:00-04:00,0.9909338775237108,eeeea eeeea eeeea ededa dddda dddda dddda eddda dddda dddda,bad,"### Human: eeeea eeeea eeeea ededa dddda dddda dddda eddda dddda dddda
+
+### Assistant: bad
+"
+2022-04-20 00:00:00-04:00,0.9852583894430248,eeeea eeeea ededa dddda dddda dddda eddda dddda dddda dddda,really bad,"### Human: eeeea eeeea ededa dddda dddda dddda eddda dddda dddda dddda
+
+### Assistant: really bad
+"
+2022-04-21 00:00:00-04:00,0.9719451325280684,eeeea ededa dddda dddda dddda eddda dddda dddda dddda dddda,really bad,"### Human: eeeea ededa dddda dddda dddda eddda dddda dddda dddda dddda
+
+### Assistant: really bad
+"
+2022-04-22 00:00:00-04:00,1.010923596195152,ededa dddda dddda dddda eddda dddda dddda dddda dddda dddca,great,"### Human: ededa dddda dddda dddda eddda dddda dddda dddda dddda dddca
+
+### Assistant: great
+"
+2022-04-25 00:00:00-04:00,0.9664098801341008,dddda dddda dddda eddda dddda dddda dddda dddda dddca cccdb,really bad,"### Human: dddda dddda dddda eddda dddda dddda dddda dddda dddca cccdb
+
+### Assistant: really bad
+"
+2022-04-26 00:00:00-04:00,1.004233234857333,dddda dddda eddda dddda dddda dddda dddda dddca cccdb dcccb,great,"### Human: dddda dddda eddda dddda dddda dddda dddda dddca cccdb dcccb
+
+### Assistant: great
+"
+2022-04-27 00:00:00-04:00,1.0275667151626275,dddda eddda dddda dddda dddda dddda dddca cccdb dcccb cccca,excellent,"### Human: dddda eddda dddda dddda dddda dddda dddca cccdb dcccb cccca
+
+### Assistant: excellent
+"
+2022-04-28 00:00:00-04:00,0.9741102166570844,eddda dddda dddda dddda dddda dddca cccdb dcccb cccca cdcdc,really bad,"### Human: eddda dddda dddda dddda dddda dddca cccdb dcccb cccca cdcdc
+
+### Assistant: really bad
+"
+2022-04-29 00:00:00-04:00,1.007976516791824,dddda dddda dddda dddda dddca cccdb dcccb cccca cdcdc cdccc,great,"### Human: dddda dddda dddda dddda dddca cccdb dcccb cccca cdcdc cdccc
+
+### Assistant: great
+"
+2022-05-02 00:00:00-04:00,1.008409749493416,dddda dddda dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc,great,"### Human: dddda dddda dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc
+
+### Assistant: great
+"
+2022-05-03 00:00:00-04:00,1.03976956332646,dddda dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca,excellent,"### Human: dddda dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca
+
+### Assistant: excellent
+"
+2022-05-04 00:00:00-04:00,0.9567897371539812,dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb,really bad,"### Human: dddda dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb
+
+### Assistant: really bad
+"
+2022-05-05 00:00:00-04:00,1.0081405314863034,dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc,great,"### Human: dddca cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc
+
+### Assistant: great
+"
+2022-05-06 00:00:00-04:00,0.981475535707321,cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc,really bad,"### Human: cccdb dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc
+
+### Assistant: really bad
+"
+2022-05-09 00:00:00-04:00,0.9935055958212584,dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc,bad,"### Human: dcccb cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc
+
+### Assistant: bad
+"
+2022-05-10 00:00:00-04:00,0.9543973941368076,cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc,really bad,"### Human: cccca cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc
+
+### Assistant: really bad
+"
+2022-05-11 00:00:00-04:00,0.998529055770942,cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd,average,"### Human: cdcdc cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd
+
+### Assistant: average
+"
+2022-05-12 00:00:00-04:00,1.0174286211791026,cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae,excellent,"### Human: cdccc ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae
+
+### Assistant: excellent
+"
+2022-05-13 00:00:00-04:00,0.9999312279943996,ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc,average,"### Human: ccccc cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc
+
+### Assistant: average
+"
+2022-05-16 00:00:00-04:00,1.0025527669034962,cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa,average,"### Human: cccca cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa
+
+### Assistant: average
+"
+2022-05-17 00:00:00-04:00,0.9589377015412156,cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba,really bad,"### Human: cdddb dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba
+
+### Assistant: really bad
+"
+2022-05-18 00:00:00-04:00,0.981913077702446,dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab,really bad,"### Human: dcccc ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab
+
+### Assistant: really bad
+"
+2022-05-19 00:00:00-04:00,0.989215615504396,ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac,bad,"### Human: ccccc cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac
+
+### Assistant: bad
+"
+2022-05-20 00:00:00-04:00,1.038609533227651,cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad,excellent,"### Human: cbcbc ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad
+
+### Assistant: excellent
+"
+2022-05-23 00:00:00-04:00,0.9968042258643252,ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac,average,"### Human: ccccc bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac
+
+### Assistant: average
+"
+2022-05-24 00:00:00-04:00,1.0150979679784764,bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab,excellent,"### Human: bbbbd aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab
+
+### Assistant: excellent
+"
+2022-05-25 00:00:00-04:00,1.0465099309850487,aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab,excellent,"### Human: aaaae aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab
+
+### Assistant: excellent
+"
+2022-05-26 00:00:00-04:00,1.029231721699165,aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa,excellent,"### Human: aabbc aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa
+
+### Assistant: excellent
+"
+2022-05-27 00:00:00-04:00,0.9984570270676388,aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc,average,"### Human: aabaa bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc
+
+### Assistant: average
+"
+2022-05-31 00:00:00-04:00,0.992061459432487,bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd,bad,"### Human: bbbba baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd
+
+### Assistant: bad
+"
+2022-06-01 00:00:00-04:00,1.022864133402875,baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb,excellent,"### Human: baaab aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb
+
+### Assistant: excellent
+"
+2022-06-02 00:00:00-04:00,0.9896528994089476,aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb,bad,"### Human: aaaac aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb
+
+### Assistant: bad
+"
+2022-06-03 00:00:00-04:00,0.9939468176764092,aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc,bad,"### Human: aaaad aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc
+
+### Assistant: bad
+"
+2022-06-06 00:00:00-04:00,1.030204367343254,aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb,excellent,"### Human: aaaac aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb
+
+### Assistant: excellent
+"
+2022-06-07 00:00:00-04:00,0.9958271967320844,aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda,bad,"### Human: aaaab aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda
+
+### Assistant: bad
+"
+2022-06-08 00:00:00-04:00,0.9698123307986743,aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda,really bad,"### Human: aaaab aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda
+
+### Assistant: really bad
+"
+2022-06-09 00:00:00-04:00,0.97754495349376,aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca,really bad,"### Human: aaaaa cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca
+
+### Assistant: really bad
+"
+2022-06-10 00:00:00-04:00,0.9925491813746068,cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc,bad,"### Human: cdddc ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc
+
+### Assistant: bad
+"
+2022-06-13 00:00:00-04:00,0.99722068382479,ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae,average,"### Human: ddddd ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae
+
+### Assistant: average
+"
+2022-06-14 00:00:00-04:00,1.008489086653087,ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab,great,"### Human: ddddb ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab
+
+### Assistant: great
+"
+2022-06-15 00:00:00-04:00,0.984706206507744,ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac,really bad,"### Human: ddddb dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac
+
+### Assistant: really bad
+"
+2022-06-16 00:00:00-04:00,1.0114552944604744,dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad,great,"### Human: dddcc dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad
+
+### Assistant: great
+"
+2022-06-17 00:00:00-04:00,1.018363041387093,dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae,excellent,"### Human: dddcb cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae
+
+### Assistant: excellent
+"
+2022-06-21 00:00:00-04:00,1.0041547061746194,cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb,great,"### Human: cdcda dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb
+
+### Assistant: great
+"
+2022-06-22 00:00:00-04:00,1.0105978429368607,dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab,great,"### Human: dddda ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab
+
+### Assistant: great
+"
+2022-06-23 00:00:00-04:00,1.0125804849350262,ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb,great,"### Human: ddcca bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb
+
+### Assistant: great
+"
+2022-06-24 00:00:00-04:00,0.9927120300744644,bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc,bad,"### Human: bbbbc aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc
+
+### Assistant: bad
+"
+2022-06-27 00:00:00-04:00,0.9670020243419172,aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb,really bad,"### Human: aaaae aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb
+
+### Assistant: really bad
+"
+2022-06-28 00:00:00-04:00,1.0128763926030953,aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba,great,"### Human: aaaab aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba
+
+### Assistant: great
+"
+2022-06-29 00:00:00-04:00,0.9961384424094945,aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba,bad,"### Human: aaaac aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba
+
+### Assistant: bad
+"
+2022-06-30 00:00:00-04:00,1.0212437483995598,aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc,excellent,"### Human: aaaad aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc
+
+### Assistant: excellent
+"
+2022-07-01 00:00:00-04:00,1.0275095678928596,aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb,excellent,"### Human: aaaae aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb
+
+### Assistant: excellent
+"
+2022-07-05 00:00:00-04:00,1.0111071241431708,aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb,great,"### Human: aaabb abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb
+
+### Assistant: great
+"
+2022-07-06 00:00:00-04:00,1.0213553839120666,abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb,excellent,"### Human: abaab bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb
+
+### Assistant: excellent
+"
+2022-07-07 00:00:00-04:00,1.0122538816371296,bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca,great,"### Human: bbbbb bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca
+
+### Assistant: great
+"
+2022-07-08 00:00:00-04:00,0.9945081138064544,bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda,bad,"### Human: bbccc ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda
+
+### Assistant: bad
+"
+2022-07-11 00:00:00-04:00,1.0006861011751134,ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca,average,"### Human: ccccb ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca
+
+### Assistant: average
+"
+2022-07-12 00:00:00-04:00,1.017483739450024,ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb,excellent,"### Human: ccbba bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb
+
+### Assistant: excellent
+"
+2022-07-13 00:00:00-04:00,1.0304691791633656,bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb,excellent,"### Human: bbbba bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb
+
+### Assistant: excellent
+"
+2022-07-14 00:00:00-04:00,1.002603814880671,bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb,average,"### Human: bbabc bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb
+
+### Assistant: average
+"
+2022-07-15 00:00:00-04:00,0.9756534560487876,bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb,really bad,"### Human: bbbbb bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb
+
+### Assistant: really bad
+"
+2022-07-18 00:00:00-04:00,1.0208220786180435,bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb,excellent,"### Human: bbbcb ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb
+
+### Assistant: excellent
+"
+2022-07-19 00:00:00-04:00,1.0127051232860114,ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb,great,"### Human: ccccb cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb
+
+### Assistant: great
+"
+2022-07-20 00:00:00-04:00,1.005501657627933,cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea,great,"### Human: cccca cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea
+
+### Assistant: great
+"
+2022-07-21 00:00:00-04:00,0.991633933606641,cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea,bad,"### Human: cddda cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea
+
+### Assistant: bad
+"
+2022-07-22 00:00:00-04:00,0.993117345650274,cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea,bad,"### Human: cccca cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea
+
+### Assistant: bad
+"
+2022-07-25 00:00:00-04:00,0.9956653853465712,cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea,bad,"### Human: cddcb ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea
+
+### Assistant: bad
+"
+2022-07-26 00:00:00-04:00,1.0275920265077705,ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda,excellent,"### Human: ccccb cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda
+
+### Assistant: excellent
+"
+2022-07-27 00:00:00-04:00,1.0023570543129503,cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb,average,"### Human: cdcdb ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb
+
+### Assistant: average
+"
+2022-07-28 00:00:00-04:00,1.0078763890498983,ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb,great,"### Human: ddddb ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb
+
+### Assistant: great
+"
+2022-07-29 00:00:00-04:00,1.0031053972862458,ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc,average,"### Human: ddddb ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc
+
+### Assistant: average
+"
+2022-08-01 00:00:00-04:00,0.9994377789303674,ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca,average,"### Human: ddddb deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca
+
+### Assistant: average
+"
+2022-08-02 00:00:00-04:00,1.0328898822765993,deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba,excellent,"### Human: deeea eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba
+
+### Assistant: excellent
+"
+2022-08-03 00:00:00-04:00,0.9987952716411064,eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb,average,"### Human: eeeea eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb
+
+### Assistant: average
+"
+2022-08-04 00:00:00-04:00,1.0131119373911932,eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda,excellent,"### Human: eeeea eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda
+
+### Assistant: excellent
+"
+2022-08-05 00:00:00-04:00,0.9909839511689388,eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda,bad,"### Human: eeeea eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda
+
+### Assistant: bad
+"
+2022-08-08 00:00:00-04:00,1.0054870983602058,eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda dddca,great,"### Human: eeeda eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda dddca
+
+### Assistant: great
+"
+2022-08-09 00:00:00-04:00,1.0093035119604232,eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda dddca dcdda,great,"### Human: eeeeb eeeeb ccccc cccca cccba cdcdb dddda cccda dddca dcdda
+
+### Assistant: great
+"
+2022-08-10 00:00:00-04:00,0.9907680107728524,eeeeb ccccc cccca cccba cdcdb dddda cccda dddca dcdda dddda,bad,"### Human: eeeeb ccccc cccca cccba cdcdb dddda cccda dddca dcdda dddda
+
+### Assistant: bad
+"
+2022-08-11 00:00:00-04:00,1.0134259726826176,ccccc cccca cccba cdcdb dddda cccda dddca dcdda dddda ededa,excellent,"### Human: ccccc cccca cccba cdcdb dddda cccda dddca dcdda dddda ededa
+
+### Assistant: excellent
+"
+2022-08-12 00:00:00-04:00,1.0097364629626089,cccca cccba cdcdb dddda cccda dddca dcdda dddda ededa eeeea,great,"### Human: cccca cccba cdcdb dddda cccda dddca dcdda dddda ededa eeeea
+
+### Assistant: great
+"
+2022-08-15 00:00:00-04:00,1.0014469267378532,cccba cdcdb dddda cccda dddca dcdda dddda ededa eeeea eeeea,average,"### Human: cccba cdcdb dddda cccda dddca dcdda dddda ededa eeeea eeeea
+
+### Assistant: average
+"
+2022-08-16 00:00:00-04:00,1.0103027072713953,cdcdb dddda cccda dddca dcdda dddda ededa eeeea eeeea eeeea,great,"### Human: cdcdb dddda cccda dddca dcdda dddda ededa eeeea eeeea eeeea
+
+### Assistant: great
+"
+2022-08-17 00:00:00-04:00,1.0023021231452336,dddda cccda dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb,average,"### Human: dddda cccda dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb
+
+### Assistant: average
+"
+2022-08-18 00:00:00-04:00,0.9912732213056188,cccda dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea,bad,"### Human: cccda dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea
+
+### Assistant: bad
+"
+2022-08-19 00:00:00-04:00,0.987506658691224,dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea,bad,"### Human: dddca dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea
+
+### Assistant: bad
+"
+2022-08-22 00:00:00-04:00,1.0008977369813297,dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda,average,"### Human: dcdda dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda
+
+### Assistant: average
+"
+2022-08-23 00:00:00-04:00,1.001255028961786,dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda,average,"### Human: dddda ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda
+
+### Assistant: average
+"
+2022-08-24 00:00:00-04:00,1.0074060908226132,ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda,great,"### Human: ededa eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda
+
+### Assistant: great
+"
+2022-08-25 00:00:00-04:00,0.9592541952946,eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea,really bad,"### Human: eeeea eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea
+
+### Assistant: really bad
+"
+2022-08-26 00:00:00-04:00,1.0014273099288844,eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb,average,"### Human: eeeea eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb
+
+### Assistant: average
+"
+2022-08-29 00:00:00-04:00,0.980139387382178,eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb cccca,really bad,"### Human: eeeea eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb cccca
+
+### Assistant: really bad
+"
+2022-08-30 00:00:00-04:00,0.9807248681620044,eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb cccca ccbbb,really bad,"### Human: eeeeb eeeea eeeea eddda dddda dddda ddeea eddcb cccca ccbbb
+
+### Assistant: really bad
+"
+2022-08-31 00:00:00-04:00,1.0084270130832622,eeeea eeeea eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb,great,"### Human: eeeea eeeea eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb
+
+### Assistant: great
+"
+2022-09-01 00:00:00-04:00,0.975336447941119,eeeea eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb,really bad,"### Human: eeeea eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb
+
+### Assistant: really bad
+"
+2022-09-02 00:00:00-04:00,0.9876014416420318,eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb,bad,"### Human: eddda dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb
+
+### Assistant: bad
+"
+2022-09-06 00:00:00-04:00,1.0073633854522503,dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab,great,"### Human: dddda dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab
+
+### Assistant: great
+"
+2022-09-07 00:00:00-04:00,0.9988360535664016,dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb,average,"### Human: dddda ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb
+
+### Assistant: average
+"
+2022-09-08 00:00:00-04:00,1.0122209679138496,ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab,great,"### Human: ddeea eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab
+
+### Assistant: great
+"
+2022-09-09 00:00:00-04:00,1.0240616356037782,eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba,excellent,"### Human: eddcb cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba
+
+### Assistant: excellent
+"
+2022-09-12 00:00:00-04:00,0.9621013271425336,cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc,really bad,"### Human: cccca ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc
+
+### Assistant: really bad
+"
+2022-09-13 00:00:00-04:00,1.0033594178888534,ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad,average,"### Human: ccbbb cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad
+
+### Assistant: average
+"
+2022-09-14 00:00:00-04:00,0.9852570393192324,cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb,really bad,"### Human: cbbbb bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb
+
+### Assistant: really bad
+"
+2022-09-15 00:00:00-04:00,0.9966271427618536,bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab,average,"### Human: bbbbb cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab
+
+### Assistant: average
+"
+2022-09-16 00:00:00-04:00,1.0346259343210855,cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae,excellent,"### Human: cbbbb bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae
+
+### Assistant: excellent
+"
+2022-09-19 00:00:00-04:00,1.0228161677917786,bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab,excellent,"### Human: bbbab bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab
+
+### Assistant: excellent
+"
+2022-09-20 00:00:00-04:00,0.9769925308157916,bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc,really bad,"### Human: bbbbb bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc
+
+### Assistant: really bad
+"
+2022-09-21 00:00:00-04:00,1.0023625186954708,bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac,average,"### Human: bbaab bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac
+
+### Assistant: average
+"
+2022-09-22 00:00:00-04:00,0.9949731480034896,bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab,bad,"### Human: bbbba ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab
+
+### Assistant: bad
+"
+2022-09-23 00:00:00-04:00,1.0074168153360308,ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac,great,"### Human: ccccc cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac
+
+### Assistant: great
+"
+2022-09-26 00:00:00-04:00,0.9935837963134552,cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab,bad,"### Human: cbbad bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab
+
+### Assistant: bad
+"
+2022-09-27 00:00:00-04:00,1.0149010902014164,bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab,excellent,"### Human: bbbbb baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab
+
+### Assistant: excellent
+"
+2022-09-28 00:00:00-04:00,0.9752223803918824,baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde,really bad,"### Human: baaab aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde
+
+### Assistant: really bad
+"
+2022-09-29 00:00:00-04:00,0.97819930734947,aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd,really bad,"### Human: aaaae aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd
+
+### Assistant: really bad
+"
+2022-09-30 00:00:00-04:00,1.030677881690238,aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad,excellent,"### Human: aaaab ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad
+
+### Assistant: excellent
+"
+2022-10-03 00:00:00-04:00,1.0073778344702813,ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd,great,"### Human: ababc bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd
+
+### Assistant: great
+"
+2022-10-04 00:00:00-04:00,1.016172599804359,bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc,excellent,"### Human: bbbac aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc
+
+### Assistant: excellent
+"
+2022-10-05 00:00:00-04:00,0.9973938352021452,aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb,average,"### Human: aaaab aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb
+
+### Assistant: average
+"
+2022-10-06 00:00:00-04:00,0.9828118628901288,aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb,really bad,"### Human: aaaac aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb
+
+### Assistant: really bad
+"
+2022-10-07 00:00:00-04:00,1.0,aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb,average,"### Human: aaaab aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb
+
+### Assistant: average
+"
+2022-10-10 00:00:00-04:00,0.9934238869972644,aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb,bad,"### Human: aaaab ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb
+
+### Assistant: bad
+"
+2022-10-11 00:00:00-04:00,0.9943217960382644,ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab,bad,"### Human: ddcde ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab
+
+### Assistant: bad
+"
+2022-10-12 00:00:00-04:00,1.0592636467475744,ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab babab,excellent,"### Human: ccbbd bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab babab
+
+### Assistant: excellent
+"
+2022-10-13 00:00:00-04:00,0.9589079566481628,bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab babab ababd,really bad,"### Human: bbbad ababd cbccc ccccb ccdcb bbbbb babbb babab babab ababd
+
+### Assistant: really bad
+"
+2022-10-14 00:00:00-04:00,1.0094988039152144,ababd cbccc ccccb ccdcb bbbbb babbb babab babab ababd cbbac,great,"### Human: ababd cbccc ccccb ccdcb bbbbb babbb babab babab ababd cbbac
+
+### Assistant: great
+"
+2022-10-17 00:00:00-04:00,0.9880403778440586,cbccc ccccb ccdcb bbbbb babbb babab babab ababd cbbac bbbbb,bad,"### Human: cbccc ccccb ccdcb bbbbb babbb babab babab ababd cbbac bbbbb
+
+### Assistant: bad
+"
+2022-10-18 00:00:00-04:00,1.015315111380866,ccccb ccdcb bbbbb babbb babab babab ababd cbbac bbbbb ccbcc,excellent,"### Human: ccccb ccdcb bbbbb babbb babab babab ababd cbbac bbbbb ccbcc
+
+### Assistant: excellent
+"
+2022-10-19 00:00:00-04:00,1.0025870165440818,ccdcb bbbbb babbb babab babab ababd cbbac bbbbb ccbcc bbccb,average,"### Human: ccdcb bbbbb babbb babab babab ababd cbbac bbbbb ccbcc bbccb
+
+### Assistant: average
+"
+2022-10-20 00:00:00-04:00,1.0307972933831513,bbbbb babbb babab babab ababd cbbac bbbbb ccbcc bbccb bbccb,excellent,"### Human: bbbbb babbb babab babab ababd cbbac bbbbb ccbcc bbccb bbccb
+
+### Assistant: excellent
+"
+2022-10-21 00:00:00-04:00,1.0153542663859634,babbb babab babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb,excellent,"### Human: babbb babab babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb
+
+### Assistant: excellent
+"
+2022-10-24 00:00:00-04:00,1.0149910057625338,babab babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb,excellent,"### Human: babab babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb
+
+### Assistant: excellent
+"
+2022-10-25 00:00:00-04:00,0.989334919589642,babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb,bad,"### Human: babab ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb
+
+### Assistant: bad
+"
+2022-10-26 00:00:00-04:00,0.9779158228492496,ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc,really bad,"### Human: ababd cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc
+
+### Assistant: really bad
+"
+2022-10-27 00:00:00-04:00,1.050877251688171,cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc,excellent,"### Human: cbbac bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc
+
+### Assistant: excellent
+"
+2022-10-28 00:00:00-04:00,1.001175193728634,bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee,average,"### Human: bbbbb ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee
+
+### Assistant: average
+"
+2022-10-31 00:00:00-04:00,0.9714340477027053,ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec,really bad,"### Human: ccbcc bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec
+
+### Assistant: really bad
+"
+2022-11-01 00:00:00-04:00,0.9736824555269548,bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb,really bad,"### Human: bbccb bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb
+
+### Assistant: really bad
+"
+2022-11-02 00:00:00-04:00,0.9776151433870774,bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc,really bad,"### Human: bbccb bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc
+
+### Assistant: really bad
+"
+2022-11-03 00:00:00-04:00,0.9738898476268818,bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac,really bad,"### Human: bcccb ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac
+
+### Assistant: really bad
+"
+2022-11-04 00:00:00-04:00,1.013201061560327,ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae,excellent,"### Human: ddddb ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae
+
+### Assistant: excellent
+"
+2022-11-07 00:00:00-05:00,0.9935189542171136,ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab,bad,"### Human: ddeeb ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab
+
+### Assistant: bad
+"
+2022-11-08 00:00:00-05:00,0.9737905784634476,ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc,really bad,"### Human: ddddc dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc
+
+### Assistant: really bad
+"
+2022-11-09 00:00:00-05:00,1.039861154099827,dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab,excellent,"### Human: dcccc dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab
+
+### Assistant: excellent
+"
+2022-11-10 00:00:00-05:00,1.0266080745380612,dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd,excellent,"### Human: dedee eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd
+
+### Assistant: excellent
+"
+2022-11-11 00:00:00-05:00,0.9953681785879565,eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc,bad,"### Human: eeeec eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc
+
+### Assistant: bad
+"
+2022-11-14 00:00:00-05:00,0.9856785710347648,eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb,really bad,"### Human: eeedb dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb
+
+### Assistant: really bad
+"
+2022-11-15 00:00:00-05:00,0.997720032283598,dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc,average,"### Human: dddcc bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc
+
+### Assistant: average
+"
+2022-11-16 00:00:00-05:00,1.0292973349689405,bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb,excellent,"### Human: bbbac bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb
+
+### Assistant: excellent
+"
+2022-11-17 00:00:00-05:00,0.9933031036122988,bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb,bad,"### Human: bbaae aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb
+
+### Assistant: bad
+"
+2022-11-18 00:00:00-05:00,0.985681878643854,aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb,really bad,"### Human: aaaab baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb
+
+### Assistant: really bad
+"
+2022-11-21 00:00:00-05:00,1.0138391124376895,baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda,excellent,"### Human: baabc aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda
+
+### Assistant: excellent
+"
+2022-11-22 00:00:00-05:00,1.010839815383453,aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda,great,"### Human: aaaab bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda
+
+### Assistant: great
+"
+2022-11-23 00:00:00-05:00,0.998651493820144,bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda ddeda,average,"### Human: bcbcd cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda ddeda
+
+### Assistant: average
+"
+2022-11-25 00:00:00-05:00,0.9936613051342555,cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda ddeda dcdda,bad,"### Human: cdcdc ddddb eeedc ddddb cdddb ededb dddda dddda ddeda dcdda
+
+### Assistant: bad
+"
+2022-11-28 00:00:00-05:00,0.978376912728796,ddddb eeedc ddddb cdddb ededb dddda dddda ddeda dcdda eeeea,really bad,"### Human: ddddb eeedc ddddb cdddb ededb dddda dddda ddeda dcdda eeeea
+
+### Assistant: really bad
+"
+2022-11-29 00:00:00-05:00,1.0468882968104385,eeedc ddddb cdddb ededb dddda dddda ddeda dcdda eeeea ddddb,excellent,"### Human: eeedc ddddb cdddb ededb dddda dddda ddeda dcdda eeeea ddddb
+
+### Assistant: excellent
+"
+2022-11-30 00:00:00-05:00,1.00067465650224,ddddb cdddb ededb dddda dddda ddeda dcdda eeeea ddddb dedec,average,"### Human: ddddb cdddb ededb dddda dddda ddeda dcdda eeeea ddddb dedec
+
+### Assistant: average
+"
+2022-12-01 00:00:00-05:00,1.012674642091194,cdddb ededb dddda dddda ddeda dcdda eeeea ddddb dedec eeeea,great,"### Human: cdddb ededb dddda dddda ddeda dcdda eeeea ddddb dedec eeeea
+
+### Assistant: great
+"
+2022-12-02 00:00:00-05:00,0.9922853126027764,ededb dddda dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea,bad,"### Human: ededb dddda dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea
+
+### Assistant: bad
+"
+2022-12-05 00:00:00-05:00,0.9717141262328316,dddda dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea,really bad,"### Human: dddda dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea
+
+### Assistant: really bad
+"
+2022-12-06 00:00:00-05:00,0.9912089459277202,dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda,bad,"### Human: dddda ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda
+
+### Assistant: bad
+"
+2022-12-07 00:00:00-05:00,1.0020370419000386,ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda dddda,average,"### Human: ddeda dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda dddda
+
+### Assistant: average
+"
+2022-12-08 00:00:00-05:00,0.9987354736517348,dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda dddda dddda,average,"### Human: dcdda eeeea ddddb dedec eeeea eeeea eeeea eedda dddda dddda
+
+### Assistant: average
+"
+2022-12-09 00:00:00-05:00,1.012543858326578,eeeea ddddb dedec eeeea eeeea eeeea eedda dddda dddda ddddb,great,"### Human: eeeea ddddb dedec eeeea eeeea eeeea eedda dddda dddda ddddb
+
+### Assistant: great
+"
+2022-12-12 00:00:00-05:00,0.973043486426108,ddddb dedec eeeea eeeea eeeea eedda dddda dddda ddddb dddea,really bad,"### Human: ddddb dedec eeeea eeeea eeeea eedda dddda dddda ddddb dddea
+
+### Assistant: really bad
+"
+2022-12-13 00:00:00-05:00,0.985276922602092,dedec eeeea eeeea eeeea eedda dddda dddda ddddb dddea eeeeb,really bad,"### Human: dedec eeeea eeeea eeeea eedda dddda dddda ddddb dddea eeeeb
+
+### Assistant: really bad
+"
+2022-12-14 00:00:00-05:00,0.9673304472368248,eeeea eeeea eeeea eedda dddda dddda ddddb dddea eeeeb eeddb,really bad,"### Human: eeeea eeeea eeeea eedda dddda dddda ddddb dddea eeeeb eeddb
+
+### Assistant: really bad
+"
+2022-12-15 00:00:00-05:00,0.9840514456387928,eeeea eeeea eedda dddda dddda ddddb dddea eeeeb eeddb ddccc,really bad,"### Human: eeeea eeeea eedda dddda dddda ddddb dddea eeeeb eeddb ddccc
+
+### Assistant: really bad
+"
+2022-12-16 00:00:00-05:00,0.9797201873970376,eeeea eedda dddda dddda ddddb dddea eeeeb eeddb ddccc cccce,really bad,"### Human: eeeea eedda dddda dddda ddddb dddea eeeeb eeddb ddccc cccce
+
+### Assistant: really bad
+"
+2022-12-19 00:00:00-05:00,1.0069259735621938,eedda dddda dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb,great,"### Human: eedda dddda dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb
+
+### Assistant: great
+"
+2022-12-20 00:00:00-05:00,1.0185742314638353,dddda dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb,excellent,"### Human: dddda dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb
+
+### Assistant: excellent
+"
+2022-12-21 00:00:00-05:00,0.9842202435454814,dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb,really bad,"### Human: dddda ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb
+
+### Assistant: really bad
+"
+2022-12-22 00:00:00-05:00,1.0071799759742832,ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb,great,"### Human: ddddb dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb
+
+### Assistant: great
+"
+2022-12-23 00:00:00-05:00,0.98972441731358,dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba,bad,"### Human: dddea eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba
+
+### Assistant: bad
+"
+2022-12-27 00:00:00-05:00,0.9720058818178704,eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba,really bad,"### Human: eeeeb eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba
+
+### Assistant: really bad
+"
+2022-12-28 00:00:00-05:00,1.012657260517391,eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab,great,"### Human: eeddb ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab
+
+### Assistant: great
+"
+2022-12-29 00:00:00-05:00,1.0118369984450082,ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab,great,"### Human: ddccc cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab
+
+### Assistant: great
+"
+2022-12-30 00:00:00-05:00,0.9600092175829786,cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb,really bad,"### Human: cccce bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb
+
+### Assistant: really bad
+"
+2023-01-03 00:00:00-05:00,0.9958231635129152,bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac,bad,"### Human: bbbbb bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac
+
+### Assistant: bad
+"
+2023-01-04 00:00:00-05:00,0.983402810855525,bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab,really bad,"### Human: bbbbb bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab
+
+### Assistant: really bad
+"
+2023-01-05 00:00:00-05:00,1.0286484637707904,bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab,excellent,"### Human: bbbcb bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab
+
+### Assistant: excellent
+"
+2023-01-06 00:00:00-05:00,0.9975472727736284,bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab,average,"### Human: bbbbb bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab
+
+### Assistant: average
+"
+2023-01-09 00:00:00-05:00,1.003608177802268,bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba,average,"### Human: bbbba babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba
+
+### Assistant: average
+"
+2023-01-10 00:00:00-05:00,1.0170667085193452,babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba,excellent,"### Human: babba aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba
+
+### Assistant: excellent
+"
+2023-01-11 00:00:00-05:00,0.996489384496852,aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba,bad,"### Human: aaaab aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba
+
+### Assistant: bad
+"
+2023-01-12 00:00:00-05:00,1.0206770866680273,aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba,excellent,"### Human: aaaab aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba
+
+### Assistant: excellent
+"
+2023-01-13 00:00:00-05:00,1.0082325936014034,aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca,great,"### Human: aaabb aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca
+
+### Assistant: great
+"
+2023-01-17 00:00:00-05:00,0.9882327106843638,aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca,bad,"### Human: aaaac aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca
+
+### Assistant: bad
+"
+2023-01-18 00:00:00-05:00,1.0088753164167297,aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca cccca,great,"### Human: aaaab aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca cccca
+
+### Assistant: great
+"
+2023-01-19 00:00:00-05:00,1.0191454491518446,aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca cccca bbcca,excellent,"### Human: aaaab aaaab abbba aaaba bbbba bbbba bbbca bccca cccca bbcca
+
+### Assistant: excellent
+"
+2023-01-20 00:00:00-05:00,1.021647882992084,aaaab abbba aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb,excellent,"### Human: aaaab abbba aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb
+
+### Assistant: excellent
+"
+2023-01-23 00:00:00-05:00,1.0158221171643598,abbba aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb,excellent,"### Human: abbba aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb
+
+### Assistant: excellent
+"
+2023-01-24 00:00:00-05:00,1.0068848124416585,aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb dddda,great,"### Human: aaaba bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb dddda
+
+### Assistant: great
+"
+2023-01-25 00:00:00-05:00,1.0055179755187929,bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb dddda dddda,great,"### Human: bbbba bbbba bbbca bccca cccca bbcca bcccb cdddb dddda dddda
+
+### Assistant: great
+"
+2023-01-26 00:00:00-05:00,1.0193489029254963,bbbba bbbca bccca cccca bbcca bcccb cdddb dddda dddda dddea,excellent,"### Human: bbbba bbbca bccca cccca bbcca bcccb cdddb dddda dddda dddea
+
+### Assistant: excellent
+"
+2023-01-27 00:00:00-05:00,0.9864789830084928,bbbca bccca cccca bbcca bcccb cdddb dddda dddda dddea deeea,really bad,"### Human: bbbca bccca cccca bbcca bcccb cdddb dddda dddda dddea deeea
+
+### Assistant: really bad
+"
+2023-01-30 00:00:00-05:00,1.0111422310574214,bccca cccca bbcca bcccb cdddb dddda dddda dddea deeea aaaaa,great,"### Human: bccca cccca bbcca bcccb cdddb dddda dddda dddea deeea aaaaa
+
+### Assistant: great
+"
+2023-01-31 00:00:00-05:00,1.0101409421594711,cccca bbcca bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa,great,"### Human: cccca bbcca bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa
+
+### Assistant: great
+"
+2023-02-01 00:00:00-05:00,1.0128946508155614,bbcca bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab,great,"### Human: bbcca bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab
+
+### Assistant: great
+"
+2023-02-02 00:00:00-05:00,1.0437073652236497,bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd,excellent,"### Human: bcccb cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd
+
+### Assistant: excellent
+"
+2023-02-03 00:00:00-05:00,0.994494254726654,cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde,bad,"### Human: cdddb dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde
+
+### Assistant: bad
+"
+2023-02-06 00:00:00-05:00,1.0266197193513231,dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb,excellent,"### Human: dddda dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb
+
+### Assistant: excellent
+"
+2023-02-07 00:00:00-05:00,0.987262758957151,dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb,really bad,"### Human: dddda dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb
+
+### Assistant: really bad
+"
+2023-02-08 00:00:00-05:00,0.9810768390869492,dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca,really bad,"### Human: dddea deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca
+
+### Assistant: really bad
+"
+2023-02-09 00:00:00-05:00,1.010370585597096,deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca,great,"### Human: deeea aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca
+
+### Assistant: great
+"
+2023-02-10 00:00:00-05:00,1.0192117205293338,aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca,excellent,"### Human: aaaaa aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca
+
+### Assistant: excellent
+"
+2023-02-13 00:00:00-05:00,1.0070996704294046,aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda,great,"### Human: aaaaa aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda
+
+### Assistant: great
+"
+2023-02-14 00:00:00-05:00,1.014499387445976,aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda cccca,excellent,"### Human: aaaab bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda cccca
+
+### Assistant: excellent
+"
+2023-02-15 00:00:00-05:00,1.00130292628616,bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda cccca dddda,average,"### Human: bbbcd bdbde ccccb cdcdb dccca dccca bccca cccda cccca dddda
+
+### Assistant: average
+"
+2023-02-16 00:00:00-05:00,1.0013127465719056,bdbde ccccb cdcdb dccca dccca bccca cccda cccca dddda ddddb,average,"### Human: bdbde ccccb cdcdb dccca dccca bccca cccda cccca dddda ddddb
+
+### Assistant: average
+"
+2023-02-17 00:00:00-05:00,0.9885485935043272,ccccb cdcdb dccca dccca bccca cccda cccca dddda ddddb cccca,bad,"### Human: ccccb cdcdb dccca dccca bccca cccda cccca dddda ddddb cccca
+
+### Assistant: bad
+"
+2023-02-21 00:00:00-05:00,1.00026874821142,cdcdb dccca dccca bccca cccda cccca dddda ddddb cccca cbcba,average,"### Human: cdcdb dccca dccca bccca cccda cccca dddda ddddb cccca cbcba
+
+### Assistant: average
+"
+2023-02-22 00:00:00-05:00,0.9954027419665408,dccca dccca bccca cccda cccca dddda ddddb cccca cbcba bbbba,bad,"### Human: dccca dccca bccca cccda cccca dddda ddddb cccca cbcba bbbba
+
+### Assistant: bad
+"
+2023-02-23 00:00:00-05:00,0.9972809877314608,dccca bccca cccda cccca dddda ddddb cccca cbcba bbbba cbbba,average,"### Human: dccca bccca cccda cccca dddda ddddb cccca cbcba bbbba cbbba
+
+### Assistant: average
+"
+2023-02-24 00:00:00-05:00,1.0014216467776953,bccca cccda cccca dddda ddddb cccca cbcba bbbba cbbba babba,average,"### Human: bccca cccda cccca dddda ddddb cccca cbcba bbbba cbbba babba
+
+### Assistant: average
+"
+2023-02-27 00:00:00-05:00,1.002448150988646,cccda cccca dddda ddddb cccca cbcba bbbba cbbba babba bbbba,average,"### Human: cccda cccca dddda ddddb cccca cbcba bbbba cbbba babba bbbba
+
+### Assistant: average
+"
+2023-02-28 00:00:00-05:00,0.9896478631512252,cccca dddda ddddb cccca cbcba bbbba cbbba babba bbbba bbbba,bad,"### Human: cccca dddda ddddb cccca cbcba bbbba cbbba babba bbbba bbbba
+
+### Assistant: bad
+"
+2023-03-01 00:00:00-05:00,1.0105970267873223,dddda ddddb cccca cbcba bbbba cbbba babba bbbba bbbba babaa,great,"### Human: dddda ddddb cccca cbcba bbbba cbbba babba bbbba bbbba babaa
+
+### Assistant: great
+"
+2023-03-02 00:00:00-05:00,1.0201972820100371,ddddb cccca cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa,excellent,"### Human: ddddb cccca cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa
+
+### Assistant: excellent
+"
+2023-03-03 00:00:00-05:00,1.0002601505082809,cccca cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb,average,"### Human: cccca cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb
+
+### Assistant: average
+"
+2023-03-06 00:00:00-05:00,0.9863370794637444,cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb,really bad,"### Human: cbcba bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb
+
+### Assistant: really bad
+"
+2023-03-07 00:00:00-05:00,1.00039262848997,bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca,average,"### Human: bbbba cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca
+
+### Assistant: average
+"
+2023-03-08 00:00:00-05:00,0.9806590175311128,cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca,really bad,"### Human: cbbba babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca
+
+### Assistant: really bad
+"
+2023-03-09 00:00:00-05:00,0.9886158934995288,babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca,bad,"### Human: babba bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca
+
+### Assistant: bad
+"
+2023-03-10 00:00:00-05:00,1.0179961011166037,bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb,excellent,"### Human: bbbba bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb
+
+### Assistant: excellent
+"
+2023-03-13 00:00:00-04:00,1.0086594233815729,bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb,great,"### Human: bbbba babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb
+
+### Assistant: great
+"
+2023-03-14 00:00:00-04:00,1.011905569301485,babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb,great,"### Human: babaa aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb
+
+### Assistant: great
+"
+2023-03-15 00:00:00-04:00,1.0242508041048708,aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb,excellent,"### Human: aaaaa bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb
+
+### Assistant: excellent
+"
+2023-03-16 00:00:00-04:00,0.9930804599027128,bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb,bad,"### Human: bbbcb ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb
+
+### Assistant: bad
+"
+2023-03-17 00:00:00-04:00,1.0150253850662052,ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc,excellent,"### Human: ddddb dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc
+
+### Assistant: excellent
+"
+2023-03-20 00:00:00-04:00,1.0124586280436587,dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb,great,"### Human: dccca cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb
+
+### Assistant: great
+"
+2023-03-21 00:00:00-04:00,0.9907721205741252,cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb,bad,"### Human: cccca dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb
+
+### Assistant: bad
+"
+2023-03-22 00:00:00-04:00,1.0006295463298738,dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb,average,"### Human: dccca cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb
+
+### Assistant: average
+"
+2023-03-23 00:00:00-04:00,1.0087498387530405,cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb,great,"### Human: cbbbb bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb
+
+### Assistant: great
+"
+2023-03-24 00:00:00-04:00,0.9896210851771275,bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea,bad,"### Human: bcbcb ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea
+
+### Assistant: bad
+"
+2023-03-27 00:00:00-04:00,0.9979742525685515,ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea,average,"### Human: ccccb ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea
+
+### Assistant: average
+"
+2023-03-28 00:00:00-04:00,1.0087846470362505,ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea,great,"### Human: ccccb cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea
+
+### Assistant: great
+"
+2023-03-29 00:00:00-04:00,1.0051383757650412,cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea,great,"### Human: cdcdb ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea
+
+### Assistant: great
+"
+2023-03-30 00:00:00-04:00,1.015144000357704,ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa,excellent,"### Human: ddddc dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa
+
+### Assistant: excellent
+"
+2023-03-31 00:00:00-04:00,1.0115662862791006,dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc,great,"### Human: dddeb eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc
+
+### Assistant: great
+"
+2023-04-03 00:00:00-04:00,0.9941776639545832,eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb,bad,"### Human: eeeeb eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb
+
+### Assistant: bad
+"
+2023-04-04 00:00:00-04:00,0.9940511657542176,eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba,bad,"### Human: eeeeb eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba
+
+### Assistant: bad
+"
+2023-04-05 00:00:00-04:00,1.0137290592063213,eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba,excellent,"### Human: eeeeb eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba
+
+### Assistant: excellent
+"
+2023-04-06 00:00:00-04:00,1.0037789655387874,eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba,average,"### Human: eeeea eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba
+
+### Assistant: average
+"
+2023-04-10 00:00:00-04:00,0.990452707154384,eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa,bad,"### Human: eeeea edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa
+
+### Assistant: bad
+"
+2023-04-11 00:00:00-04:00,0.9930530014346404,edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa,bad,"### Human: edeea eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa
+
+### Assistant: bad
+"
+2023-04-12 00:00:00-04:00,1.024314746996578,eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa,excellent,"### Human: eeeea aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa
+
+### Assistant: excellent
+"
+2023-04-13 00:00:00-04:00,1.0037669991480145,aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc,average,"### Human: aaaaa aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc
+
+### Assistant: average
+"
+2023-04-14 00:00:00-04:00,1.000848018612599,aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba,average,"### Human: aaabc abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba
+
+### Assistant: average
+"
+2023-04-17 00:00:00-04:00,1.002227544272075,abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba,average,"### Human: abbbb bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba
+
+### Assistant: average
+"
+2023-04-18 00:00:00-04:00,1.011037405291744,bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba,great,"### Human: bbbba baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba
+
+### Assistant: great
+"
+2023-04-19 00:00:00-04:00,1.0033716513392803,baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca,average,"### Human: baaba aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca
+
+### Assistant: average
+"
+2023-04-20 00:00:00-04:00,0.99981824429723,aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba,average,"### Human: aaaba aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba
+
+### Assistant: average
+"
+2023-04-21 00:00:00-04:00,1.002000011097301,aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb,average,"### Human: aaaaa aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb
+
+### Assistant: average
+"
+2023-04-24 00:00:00-04:00,0.9914038492163044,aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba,bad,"### Human: aaaaa aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba
+
+### Assistant: bad
+"
+2023-04-25 00:00:00-04:00,1.0042928796683606,aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba,great,"### Human: aaaaa ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba
+
+### Assistant: great
+"
+2023-04-26 00:00:00-04:00,1.0194927124711757,ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba,excellent,"### Human: ababc bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba
+
+### Assistant: excellent
+"
+2023-04-27 00:00:00-04:00,1.0070626573910668,bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb,great,"### Human: bbbba babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb
+
+### Assistant: great
+"
+2023-04-28 00:00:00-04:00,1.001831271035144,babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb,average,"### Human: babba bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb
+
+### Assistant: average
+"
+2023-05-01 00:00:00-04:00,0.9908871592384616,bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca,bad,"### Human: bbbba bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca
+
+### Assistant: bad
+"
+2023-05-02 00:00:00-04:00,0.9879055867152932,bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca,bad,"### Human: bbbca bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca
+
+### Assistant: bad
+"
+2023-05-03 00:00:00-04:00,1.0054581472485642,bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb,great,"### Human: bbbba bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb
+
+### Assistant: great
+"
+2023-05-04 00:00:00-04:00,1.0151480387261616,bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc,excellent,"### Human: bbbbb bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc
+
+### Assistant: excellent
+"
+2023-05-05 00:00:00-04:00,1.0059137540452645,bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde,great,"### Human: bbbba bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde
+
+### Assistant: great
+"
+2023-05-08 00:00:00-04:00,0.9926033010301996,bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb,bad,"### Human: bbbba aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb
+
+### Assistant: bad
+"
+2023-05-09 00:00:00-04:00,1.0031209875898657,aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb dddda,average,"### Human: aaaba bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb dddda
+
+### Assistant: average
+"
+2023-05-10 00:00:00-04:00,0.9994247563991682,bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb dddda ddddb,average,"### Human: bbbcb ccccb cccca cccca ccccb bbbbc dddde ddddb dddda ddddb
+
+### Assistant: average
+"
+2023-05-11 00:00:00-04:00,0.9939523797805658,ccccb cccca cccca ccccb bbbbc dddde ddddb dddda ddddb dddda,bad,"### Human: ccccb cccca cccca ccccb bbbbc dddde ddddb dddda ddddb dddda
+
+### Assistant: bad
+"
+2023-05-12 00:00:00-04:00,0.993705264987072,cccca cccca ccccb bbbbc dddde ddddb dddda ddddb dddda dddda,bad,"### Human: cccca cccca ccccb bbbbc dddde ddddb dddda ddddb dddda dddda
+
+### Assistant: bad
+"
+2023-05-15 00:00:00-04:00,1.0004651539537155,cccca ccccb bbbbc dddde ddddb dddda ddddb dddda dddda dddda,average,"### Human: cccca ccccb bbbbc dddde ddddb dddda ddddb dddda dddda dddda
+
+### Assistant: average
+"
+2023-05-16 00:00:00-04:00,1.0057072720821223,ccccb bbbbc dddde ddddb dddda ddddb dddda dddda dddda dddda,great,"### Human: ccccb bbbbc dddde ddddb dddda ddddb dddda dddda dddda dddda
+
+### Assistant: great
+"
+2023-05-17 00:00:00-04:00,1.0118497286228774,bbbbc dddde ddddb dddda ddddb dddda dddda dddda dddda ddddb,great,"### Human: bbbbc dddde ddddb dddda ddddb dddda dddda dddda dddda ddddb
+
+### Assistant: great
+"
+2023-05-18 00:00:00-04:00,0.9930268397766588,dddde ddddb dddda ddddb dddda dddda dddda dddda ddddb dddeb,bad,"### Human: dddde ddddb dddda ddddb dddda dddda dddda dddda ddddb dddeb
+
+### Assistant: bad
+"
+2023-05-19 00:00:00-04:00,1.0012645202098274,ddddb dddda ddddb dddda dddda dddda dddda ddddb dddeb eeeeb,average,"### Human: ddddb dddda ddddb dddda dddda dddda dddda ddddb dddeb eeeeb
+
+### Assistant: average
+"
+2023-05-22 00:00:00-04:00,0.990931627794492,dddda ddddb dddda dddda dddda dddda ddddb dddeb eeeeb edeea,bad,"### Human: dddda ddddb dddda dddda dddda dddda ddddb dddeb eeeeb edeea
+
+### Assistant: bad
+"
+2023-05-23 00:00:00-04:00,1.0043836578178351,ddddb dddda dddda dddda dddda ddddb dddeb eeeeb edeea dddda,great,"### Human: ddddb dddda dddda dddda dddda ddddb dddeb eeeeb edeea dddda
+
+### Assistant: great
+"
+2023-05-24 00:00:00-04:00,1.0033640845585234,dddda dddda dddda dddda ddddb dddeb eeeeb edeea dddda dddda,average,"### Human: dddda dddda dddda dddda ddddb dddeb eeeeb edeea dddda dddda
+
+### Assistant: average
+"
+2023-05-25 00:00:00-04:00,1.0121739283544773,dddda dddda dddda ddddb dddeb eeeeb edeea dddda dddda ddddb,great,"### Human: dddda dddda dddda ddddb dddeb eeeeb edeea dddda dddda ddddb
+
+### Assistant: great
+"
+2023-05-26 00:00:00-04:00,1.0019213173880606,dddda dddda ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb,average,"### Human: dddda dddda ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb
+
+### Assistant: average
+"
+2023-05-30 00:00:00-04:00,0.9995488533794136,dddda ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb,average,"### Human: dddda ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb
+
+### Assistant: average
+"
+2023-05-31 00:00:00-04:00,1.013449631011218,ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad,excellent,"### Human: ddddb dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad
+
+### Assistant: excellent
+"
+2023-06-01 00:00:00-04:00,0.999558074177793,dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac,average,"### Human: dddeb eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac
+
+### Assistant: average
+"
+2023-06-02 00:00:00-04:00,0.9832995511678658,eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab,really bad,"### Human: eeeeb edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab
+
+### Assistant: really bad
+"
+2023-06-05 00:00:00-04:00,0.995777104508079,edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae,bad,"### Human: edeea dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae
+
+### Assistant: bad
+"
+2023-06-06 00:00:00-04:00,0.9965254701372744,dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab,bad,"### Human: dddda dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab
+
+### Assistant: bad
+"
+2023-06-07 00:00:00-04:00,1.0150085076972402,dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab,excellent,"### Human: dddda ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab
+
+### Assistant: excellent
+"
+2023-06-08 00:00:00-04:00,0.9970248303794336,ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab,average,"### Human: ddddb dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab
+
+### Assistant: average
+"
+2023-06-09 00:00:00-04:00,1.013901853336331,dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa,excellent,"### Human: dedeb eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa
+
+### Assistant: excellent
+"
+2023-06-12 00:00:00-04:00,1.002789904257778,eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb,average,"### Human: eeeeb aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb
+
+### Assistant: average
+"
+2023-06-13 00:00:00-04:00,1.003163013832683,aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb,average,"### Human: aaaad aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb
+
+### Assistant: average
+"
+2023-06-14 00:00:00-04:00,1.0111436601334622,aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb,great,"### Human: aaaac aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb
+
+### Assistant: great
+"
+2023-06-15 00:00:00-04:00,0.9903068730251848,aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb,bad,"### Human: aaaab bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb
+
+### Assistant: bad
+"
+2023-06-16 00:00:00-04:00,1.0032535699409555,bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd,average,"### Human: bbaae aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd
+
+### Assistant: average
+"
+2023-06-20 00:00:00-04:00,0.994916240055998,aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb,bad,"### Human: aaaab aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb
+
+### Assistant: bad
+"
+2023-06-21 00:00:00-04:00,1.0177424317479802,aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba,excellent,"### Human: aaaab aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba
+
+### Assistant: excellent
+"
+2023-06-22 00:00:00-04:00,1.0060899466744186,aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb,great,"### Human: aaaab babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb
+
+### Assistant: great
+"
+2023-06-23 00:00:00-04:00,0.9916501763993754,babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb,bad,"### Human: babaa bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb
+
+### Assistant: bad
+"
+2023-06-26 00:00:00-04:00,1.011673560579215,bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca,great,"### Human: bbbbb bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca
+
+### Assistant: great
+"
+2023-06-27 00:00:00-04:00,1.0070239311215006,bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb,great,"### Human: bbbbb bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb
+
+### Assistant: great
+"
+2023-06-28 00:00:00-04:00,1.0026972419182203,bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb,average,"### Human: bbbbb bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb
+
+### Assistant: average
+"
+2023-06-29 00:00:00-04:00,1.0122110122541694,bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda,great,"### Human: bbbcb cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda
+
+### Assistant: great
+"
+2023-06-30 00:00:00-04:00,0.9931881924153944,cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec,bad,"### Human: cccbd bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec
+
+### Assistant: bad
+"
+2023-07-03 00:00:00-04:00,0.998747165610544,bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa,average,"### Human: bbccb cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa
+
+### Assistant: average
+"
+2023-07-05 00:00:00-04:00,1.0103771663437917,cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa dddda,great,"### Human: cbbba bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa dddda
+
+### Assistant: great
+"
+2023-07-06 00:00:00-04:00,0.9961861398445152,bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa dddda dddda,bad,"### Human: bcbcb ccccb cccca ccccb cccdb dcdda dedec ededa dddda dddda
+
+### Assistant: bad
+"
+2023-07-07 00:00:00-04:00,0.9965656033216206,ccccb cccca ccccb cccdb dcdda dedec ededa dddda dddda dddda,bad,"### Human: ccccb cccca ccccb cccdb dcdda dedec ededa dddda dddda dddda
+
+### Assistant: bad
+"
+2023-07-10 00:00:00-04:00,0.994290538115109,cccca ccccb cccdb dcdda dedec ededa dddda dddda dddda dcccb,bad,"### Human: cccca ccccb cccdb dcdda dedec ededa dddda dddda dddda dcccb
+
+### Assistant: bad
+"
+2023-07-11 00:00:00-04:00,1.0004745444968124,ccccb cccdb dcdda dedec ededa dddda dddda dddda dcccb dccca,average,"### Human: ccccb cccdb dcdda dedec ededa dddda dddda dddda dcccb dccca
+
+### Assistant: average
+"
+2023-07-12 00:00:00-04:00,1.0002099385098833,cccdb dcdda dedec ededa dddda dddda dddda dcccb dccca ddddb,average,"### Human: cccdb dcdda dedec ededa dddda dddda dddda dcccb dccca ddddb
+
+### Assistant: average
+"
+2023-07-13 00:00:00-04:00,1.0024181607748448,dcdda dedec ededa dddda dddda dddda dcccb dccca ddddb dddda,average,"### Human: dcdda dedec ededa dddda dddda dddda dcccb dccca ddddb dddda
+
+### Assistant: average
+"
+2023-07-14 00:00:00-04:00,1.0108911498861597,dedec ededa dddda dddda dddda dcccb dccca ddddb dddda dddda,great,"### Human: dedec ededa dddda dddda dddda dcccb dccca ddddb dddda dddda
+
+### Assistant: great
+"
+2023-07-17 00:00:00-04:00,1.0019652940885866,ededa dddda dddda dddda dcccb dccca ddddb dddda dddda ddeeb,average,"### Human: ededa dddda dddda dddda dcccb dccca ddddb dddda dddda ddeeb
+
+### Assistant: average
+"
+2023-07-18 00:00:00-04:00,1.01035732748205,dddda dddda dddda dcccb dccca ddddb dddda dddda ddeeb edeea,great,"### Human: dddda dddda dddda dcccb dccca ddddb dddda dddda ddeeb edeea
+
+### Assistant: great
+"
+2023-07-19 00:00:00-04:00,0.9899533984731668,dddda dddda dcccb dccca ddddb dddda dddda ddeeb edeea eeeec,bad,"### Human: dddda dddda dcccb dccca ddddb dddda dddda ddeeb edeea eeeec
+
+### Assistant: bad
+"
+2023-07-20 00:00:00-04:00,0.9888716970933144,dddda dcccb dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb,bad,"### Human: dddda dcccb dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb
+
+### Assistant: bad
+"
+2023-07-21 00:00:00-04:00,0.996587541235652,dcccb dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc,bad,"### Human: dcccb dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc
+
+### Assistant: bad
+"
+2023-07-24 00:00:00-04:00,1.0014999911208102,dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea,average,"### Human: dccca ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea
+
+### Assistant: average
+"
+2023-07-25 00:00:00-04:00,1.0042856500175656,ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea,great,"### Human: ddddb dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea
+
+### Assistant: great
+"
+2023-07-26 00:00:00-04:00,0.9857157280342372,dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea,really bad,"### Human: dddda dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea
+
+### Assistant: really bad
+"
+2023-07-27 00:00:00-04:00,1.0059588209432389,dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea,great,"### Human: dddda ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea
+
+### Assistant: great
+"
+2023-07-28 00:00:00-04:00,1.0019891838952606,ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea,average,"### Human: ddeeb edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea
+
+### Assistant: average
+"
+2023-07-31 00:00:00-04:00,0.99678962054027,edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea,average,"### Human: edeea eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea
+
+### Assistant: average
+"
+2023-08-01 00:00:00-04:00,0.9873872460020584,eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea,bad,"### Human: eeeec eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea
+
+### Assistant: bad
+"
+2023-08-02 00:00:00-04:00,0.9979119426842404,eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea,average,"### Human: eeeeb eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea
+
+### Assistant: average
+"
+2023-08-03 00:00:00-04:00,0.9809724089154684,eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb,really bad,"### Human: eeddc eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb
+
+### Assistant: really bad
+"
+2023-08-04 00:00:00-04:00,0.98199089281633,eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce,really bad,"### Human: eeeea edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce
+
+### Assistant: really bad
+"
+2023-08-07 00:00:00-04:00,1.0006121687843343,edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd,average,"### Human: edeea eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd
+
+### Assistant: average
+"
+2023-08-08 00:00:00-04:00,0.9851827680205064,eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc,really bad,"### Human: eeeea eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc
+
+### Assistant: really bad
+"
+2023-08-09 00:00:00-04:00,0.9915868367351188,eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb,bad,"### Human: eeeea eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb
+
+### Assistant: bad
+"
+2023-08-10 00:00:00-04:00,1.0026504959536502,eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb,average,"### Human: eeeea eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb
+
+### Assistant: average
+"
+2023-08-11 00:00:00-04:00,1.0083722283696357,eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb,great,"### Human: eeeea eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb
+
+### Assistant: great
+"
+2023-08-14 00:00:00-04:00,0.9920057698147586,eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba,bad,"### Human: eeeea eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba
+
+### Assistant: bad
+"
+2023-08-15 00:00:00-04:00,0.9968384940825568,eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba,average,"### Human: eeeea eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba
+
+### Assistant: average
+"
+2023-08-16 00:00:00-04:00,0.9822739110281834,eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba,really bad,"### Human: eeeeb cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba
+
+### Assistant: really bad
+"
+2023-08-17 00:00:00-04:00,1.0127104028010283,cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab,great,"### Human: cdcce ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab
+
+### Assistant: great
+"
+2023-08-18 00:00:00-04:00,1.0043981777658002,ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab,great,"### Human: ccbbd bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab
+
+### Assistant: great
+"
+2023-08-21 00:00:00-04:00,1.0009601161825898,bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba,average,"### Human: bbbbc cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba
+
+### Assistant: average
+"
+2023-08-22 00:00:00-04:00,1.0145641428551526,cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba,excellent,"### Human: cbbbb bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba
+
+### Assistant: excellent
+"
+2023-08-23 00:00:00-04:00,0.9762550875651128,bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb,really bad,"### Human: bbbbb bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb
+
+### Assistant: really bad
+"
+2023-08-24 00:00:00-04:00,1.0069342411415068,bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb,great,"### Human: bbbbb bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb
+
+### Assistant: great
+"
+2023-08-25 00:00:00-04:00,1.000555311819364,bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb,average,"### Human: bbbba bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb
+
+### Assistant: average
+"
+2023-08-28 00:00:00-04:00,1.0245965400334334,bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba,excellent,"### Human: bbbba bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba
+
+### Assistant: excellent
+"
+2023-08-29 00:00:00-04:00,1.0146533547058687,bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb,excellent,"### Human: bbbba bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb
+
+### Assistant: excellent
+"
+2023-08-30 00:00:00-04:00,1.0001597038963037,bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb,average,"### Human: bbbab aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb
+
+### Assistant: average
+"
+2023-08-31 00:00:00-04:00,0.9998416867463864,aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb,average,"### Human: aaaab babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb
+
+### Assistant: average
+"
+2023-09-01 00:00:00-04:00,1.007541949108518,babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda,great,"### Human: babba bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda
+
+### Assistant: great
+"
+2023-09-05 00:00:00-04:00,0.9708599235019536,bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda,really bad,"### Human: bbbba bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda
+
+### Assistant: really bad
+"
+2023-09-06 00:00:00-04:00,1.013586054243177,bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc,excellent,"### Human: bbbcb cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc
+
+### Assistant: excellent
+"
+2023-09-07 00:00:00-04:00,0.9990467427983396,cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe,average,"### Human: cbbbb bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe
+
+### Assistant: average
+"
+2023-09-08 00:00:00-04:00,0.9960570517854824,bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb,bad,"### Human: bbbbb cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb
+
+### Assistant: bad
+"
+2023-09-11 00:00:00-04:00,0.98222740908252,cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb,really bad,"### Human: cbbba bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb
+
+### Assistant: really bad
+"
+2023-09-12 00:00:00-04:00,0.9869696455467304,bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd,really bad,"### Human: bcccb cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd
+
+### Assistant: really bad
+"
+2023-09-13 00:00:00-04:00,1.0100000315699085,cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad,great,"### Human: cdddb ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad
+
+### Assistant: great
+"
+2023-09-14 00:00:00-04:00,0.991670437124372,ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb,bad,"### Human: ddddb dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb
+
+### Assistant: bad
+"
+2023-09-15 00:00:00-04:00,1.0084429143769045,dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae,great,"### Human: dddda dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae
+
+### Assistant: great
+"
+2023-09-18 00:00:00-04:00,1.0087314275262118,dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb,great,"### Human: dddda ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb
+
+### Assistant: great
+"
+2023-09-19 00:00:00-04:00,0.9789691558116828,ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb,really bad,"### Human: ddccc bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb
+
+### Assistant: really bad
+"
+2023-09-20 00:00:00-04:00,0.9964479497843794,bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb,bad,"### Human: bbbbe bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb
+
+### Assistant: bad
+"
+2023-09-21 00:00:00-04:00,1.0006869818425912,bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab,average,"### Human: bbbbb cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab
+
+### Assistant: average
+"
+2023-09-22 00:00:00-04:00,1.0107922211007334,cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab,great,"### Human: cbbbb bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab
+
+### Assistant: great
+"
+2023-09-25 00:00:00-04:00,0.9836403129474336,bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba,really bad,"### Human: bbbbd bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba
+
+### Assistant: really bad
+"
+2023-09-26 00:00:00-04:00,0.9873131589424532,bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab,really bad,"### Human: bbbad aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab
+
+### Assistant: really bad
+"
+2023-09-27 00:00:00-04:00,1.0079721632969798,aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab aaaab,great,"### Human: aabbb babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab aaaab
+
+### Assistant: great
+"
+2023-09-28 00:00:00-04:00,0.9952912595135692,babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab aaaab aaaab,bad,"### Human: babae bbbbb bbbbb bbbbb aabab bbbab abbba baaab aaaab aaaab
+
+### Assistant: bad
+"

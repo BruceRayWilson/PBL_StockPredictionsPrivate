@@ -4,6 +4,7 @@ processed_sentences/
 data/
 train_data/
 Test_001/
+tmp_trainer/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
