@@ -100,7 +100,7 @@ class LLM:
         import torch
 
         # Load the pre-trained model and tokenizer
-        model_name = "bert-base-uncased"
+        model_name = "Test_002"
         model = AutoModelForSequenceClassification.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
 

@@ -3,7 +3,13 @@ processed_data/
 processed_sentences/
 data/
 train_data/
+master_train_data/
+test_data/
 Test_001/
+Test_002/
+Test_003/
+Test_004/
+Test_005/
 tmp_trainer/
 
 # Byte-compiled / optimized / DLL files

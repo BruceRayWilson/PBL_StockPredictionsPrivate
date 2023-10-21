@@ -8,7 +8,7 @@ class TrainPreparation:
     DATA_DIR: str = 'processed_sentences'
     TARGET_DIR: str = 'train_data'
     # Categories for labeling data
-    CATEGORY_LABELS: List[str] = ['really bad', 'bad', 'average', 'great', 'excellent']
+    CATEGORY_LABELS: List[str] = ['0', '1', '2', '3', '4']
 
     def __init__(self, data_dir: str = DATA_DIR, target_dir: str = TARGET_DIR) -> None:
         self.data_dir = data_dir
