@@ -72,10 +72,23 @@ class TrainPreparation:
             
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
+            new_filename = new_filename.replace('csv', 'json')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
-            df['text'] = '### Human: ' + df['Sentence'] + '\n\n### Assistant: ' + df['Gain'].astype(str) + '\n'
-            df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
+            # df['text'] = '### Human: ' + df['Sentence'] + '\n\n### Assistant: ' + df['Gain'].astype(str) + '\n'
+            selected_columns = ['Sentence', 'Gain']
+            df = df[selected_columns]
+            # df['Sentence'] = df['Sentence'].apply(lambda x: f'"{x}"')
+            # df['Gain'] = df['Gain'].apply(lambda x: f'"{x}"')
+            # df['Sentence'] = df['Sentence'].apply(lambda x: f'"{x}"' if '"' not in x else x)
+            # df['Gain'] = df['Gain'].apply(lambda x: f'"{x}"' if '"' not in x else x)
+            df['Sentence'] = df['Sentence'].astype(str)
+            df['Gain'] = df['Gain'].astype(str)
+            # print(df.dtypes)
+
+            # df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
+            df.to_json(os.path.join(self.target_dir, new_filename), orient='records', lines=True)
+
 
 def main() -> None:
     TrainPreparation.exec()
