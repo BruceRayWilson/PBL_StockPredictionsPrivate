@@ -72,7 +72,7 @@ class TrainPreparation:
             
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
-            new_filename = new_filename.replace('csv', 'json')
+            # new_filename = new_filename.replace('csv', 'json')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
             # df['text'] = '### Human: ' + df['Sentence'] + '\n\n### Assistant: ' + df['Gain'].astype(str) + '\n'
@@ -86,8 +86,8 @@ class TrainPreparation:
             df['Gain'] = df['Gain'].astype(str)
             # print(df.dtypes)
 
-            # df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
-            df.to_json(os.path.join(self.target_dir, new_filename), orient='records', lines=True)
+            df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
+            # df.to_json(os.path.join(self.target_dir, new_filename), orient='records', lines=True)
 
 
 def main() -> None:
