@@ -63,7 +63,7 @@ class LLM:
         tokenizer = AutoTokenizer.from_pretrained(model_name)
 
         def preprocess_function(examples):
-            return tokenizer(examples["text_cleaned"], truncation=True)
+            return tokenizer(examples[text_column_name], truncation=True)
 
         tokenized_train = train_dataset.map(preprocess_function, batched=True)
         tokenized_test = test_dataset.map(preprocess_function, batched=True)
@@ -71,7 +71,7 @@ class LLM:
         # Initialize model
         from transformers import AutoModelForSequenceClassification
 
-        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
 
         # Train model
         from transformers import DataCollatorWithPadding
