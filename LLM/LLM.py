@@ -25,55 +25,94 @@ class LLM:
             task_type='CASUAL_LM',
         )
 
-        # help(load_dataset)
 
-        # Load the dataset for training and test
-        dataset = load_dataset("master_train_data", split=None)
-        print(f"dataset: {dataset}")
-        print(f"\n\n\t\tTraining dataset size: {len(dataset['train'])}\n\n")
-        # print(f"\n\n\t\tTest dataset size: {len(dataset['test'])}\n\n")
 
-        # Initialize the trainer
-        trainer = SFTTrainer(
-            "facebook/opt-350m",
-            train_dataset=dataset['train'],
-            dataset_text_field="text",
-            max_seq_length=128,
-            peft_config=peft_config
+
+
+
+
+        data_path = "master_train_data/master.csv" #@param {type:"string"}
+        text_column_name = "Sentence" #@param {type:"string"}
+        label_column_name = "Gain" #@param {type:"string"}
+
+        model_name = "distilbert-base-uncased" #@param {type:"string"}
+        test_size = 0.2 #@param {type:"number"}
+        num_labels = 5 #@param {type:"number"}
+
+        df = pd.read_csv(data_path)
+        df.head()
+
+        from sklearn import preprocessing
+
+        le = preprocessing.LabelEncoder()
+        le.fit(df[label_column_name].tolist())
+        df['label'] = le.transform(df[label_column_name].tolist())
+        df.head()
+
+        from sklearn.model_selection import train_test_split
+        df_train, df_test = train_test_split(df, test_size=test_size)
+
+        # Convert to Huggingface Dataset
+        from datasets import Dataset
+        train_dataset = Dataset.from_pandas(df_train)
+        test_dataset  = Dataset.from_pandas(df_test)
+
+        # Tokenizer
+        from transformers import AutoTokenizer
+
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+        def preprocess_function(examples):
+            return tokenizer(examples["text_cleaned"], truncation=True)
+
+        tokenized_train = train_dataset.map(preprocess_function, batched=True)
+        tokenized_test = test_dataset.map(preprocess_function, batched=True)
+
+        # Initialize model
+        from transformers import AutoModelForSequenceClassification
+
+        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+
+        # Train model
+        from transformers import DataCollatorWithPadding
+        from transformers import TrainingArguments, Trainer
+        import evaluate
+        import numpy as np
+
+        data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+        metric = evaluate.load("accuracy")
+
+        def compute_metrics(eval_pred):
+            logits, labels = eval_pred
+            predictions = np.argmax(logits, axis=-1)
+            return metric.compute(predictions=predictions, references=labels)
+
+        training_args = TrainingArguments(
+            output_dir="./results",
+            learning_rate=2e-4,
+            per_device_train_batch_size=8,
+            per_device_eval_batch_size=8,
+            num_train_epochs=5,
+            weight_decay=0.01,
+            evaluation_strategy = "epoch",
+            logging_strategy="epoch"
         )
 
-        # Train the model
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=tokenized_train,
+            eval_dataset=tokenized_test,
+            tokenizer=tokenizer,
+            data_collator=data_collator,
+            compute_metrics=compute_metrics
+
+        )
+
+
         trainer.train()
 
-        # # Load the pre-trained model and tokenizer for evaluation
-        # model_name = "facebook/opt-350m"  # Replace with the model you trained
-        # model = AutoModelForSequenceClassification.from_pretrained(model_name)
-        # tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-        # # Evaluate the model on the validation dataset
-        # valid_inputs = [example["text"] for example in dataset['test']]
-        # valid_labels = [example["label"] for example in dataset['test']]
-
-        # # Tokenize the validation inputs
-        # valid_tokens = tokenizer(valid_inputs, return_tensors="pt", padding=True, truncation=True)
-
-        # # Perform inference on the validation set
-        # with torch.no_grad():
-        #     valid_output = model(**valid_tokens)
-
-        # # Post-process the output to get predicted class labels
-        # valid_predictions = torch.argmax(valid_output.logits, dim=1).tolist()
-
-        # # Calculate accuracy and other evaluation metrics
-        # accuracy = accuracy_score(valid_labels, valid_predictions)
-        # classification_rep = classification_report(valid_labels, valid_predictions)
-
-        # # Print evaluation results
-        # print(f"Validation Accuracy: {accuracy}")
-        # print("Classification Report:\n", classification_rep)
-
-        # # Plot the confusion matrix
-        # LLM.plot_confusion_matrix(valid_labels, valid_predictions)
 
     @staticmethod
     def plot_confusion_matrix(true_labels, predicted_labels, class_names=None):
