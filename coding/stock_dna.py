@@ -6,7 +6,7 @@ import numpy as np
 
 class StockDna:
     # Class to process collected stock market data
-    num_days = 10
+    num_days = 7
 
     @staticmethod
     def exec() -> None:
