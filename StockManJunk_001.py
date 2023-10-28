@@ -123,10 +123,10 @@ def menu(args) -> None:
         print("3. Stock Preprocessor")
         print("4. Stock DNA")
         print("5. Train Preparation")
-        print("6. Master Data")
-        print("7. LLM")
-        print("   7.1 LLM Training")
-        print("   7.2 LLM Prediction")
+        print("6. LLM")
+        print("   6.1 LLM Training")
+        print("   6.2 LLM Prediction")
+        print("7. Master Data")  # New menu item for Master Data
         print("Q. Quit")
 
         choice = input("Choose an option (1-7, Q to quit): ")
@@ -148,13 +148,13 @@ def menu(args) -> None:
         elif choice == '5':
             TrainPreparation.exec()
         elif choice == '6':
-            master_data()
-        elif choice == '7':  # Logic for LLM choices
             subchoice = input("   Choose an option (1 or 2): ")
             if subchoice == '1':
                 LLM.train()
             elif subchoice == '2':
                 LLM.predict_string()
+        elif choice == '7':  # New logic to execute master_data from the menu
+            master_data()
 
 if __name__ == "__main__":
     main()
