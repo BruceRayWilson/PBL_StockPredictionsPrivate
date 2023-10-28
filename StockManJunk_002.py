@@ -19,7 +19,16 @@ from LLM.LLM import LLM
 
 
 def master_data():
-    os.chdir("train_data")
+    os.chdir("train_data")  # Move to the 'train_data' directory
+
+    # Check if 'master_train_data' directory exists relative to 'train_data'; if not, create it
+    if not os.path.exists("../master_train_data"):
+        os.makedirs("../master_train_data")
+
+    # If 'master.csv' exists in 'master_train_data', delete it
+    master_csv_path = "../master_train_data/master.csv"
+    if os.path.exists(master_csv_path):
+        os.remove(master_csv_path)
 
     # Loop through the alphabet from Q to Z
     for letter in 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z':
@@ -36,11 +45,11 @@ def master_data():
         # Copy header from the first CSV file to master.csv
         with open(csv_files[0], 'r') as first_csv:
             header = first_csv.readline()
-            with open("../master_train_data/master.csv", 'w') as master:
+            with open(master_csv_path, 'w') as master:
                 master.write(header)
 
         # Append the content (excluding headers) of each CSV file to master.csv
-        with open("../master_train_data/master.csv", 'a') as master:
+        with open(master_csv_path, 'a') as master:
             for file in csv_files:
                 with open(file, 'r') as csv_file:
                     csv_file.readline()  # Skip header
