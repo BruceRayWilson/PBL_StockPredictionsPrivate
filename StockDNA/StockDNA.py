@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 class StockDNA:
-    num_days = 10
+    num_days = 7
 
     @staticmethod
     def exec(chunk_size):

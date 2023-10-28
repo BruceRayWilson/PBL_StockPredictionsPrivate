@@ -1,7 +1,5 @@
 cd train_data
 
-
-
 # Loop through the alphabet, starting from the specified letter
 for letter in {Q..Z}; do
     # Construct the pattern to match CSV files
@@ -27,8 +25,3 @@ for file in *.csv; do
 done
 
 cd ..
-# ll master_train_data
-
-# mv master_train_data/* .
-# head -n 100000 master.csv > master_train_data/master.csv
-# tail -n 50000 master.csv > test_data/test.csv
