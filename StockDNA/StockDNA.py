@@ -57,9 +57,9 @@ class StockDNA:
         # Bin 'Volume' into 5 bins and change the data
         df['Volume'] = pd.cut(df['Volume'], bins=5, labels=['a', 'b', 'c', 'd', 'e'])
 
-        # Concatenate the binned columns into a new column named "word"
+        # Concatenate the binned columns into a new column named "word" with spaces and 'day'
         allColumns = columns_to_bin + ['Volume']
-        df['Word'] = df[allColumns].apply(lambda x: ''.join(x), axis=1)
+        df['Word'] = df[allColumns].apply(lambda x: ' '.join(map(str, x)) + ' day', axis=1)
 
         # Save the processed data to the 'processed_data' directory with the stock symbol as the filename
         processed_filename = f'./processed_data/{stock_symbol}.csv'
@@ -69,13 +69,28 @@ class StockDNA:
 
     @staticmethod
     def create_sentences_from_data(df):
+        # Initialize an empty list to store the sentences
         sentences = []
+        
+        # Loop through the DataFrame from the beginning to a point
+        # where there are enough rows to create a sentence (num_days)
         for i in range(0, len(df) - StockDNA.num_days + 1):
+            # Extract a window of data with 'num_days' rows
             window = df.iloc[i:i+StockDNA.num_days]
+            
+            # Concatenate the 'Word' values in the window to form a sentence
             sentence = " ".join(window['Word'].values)
+            
+            # Get the date from the last row of the window
             date = window['Date'].iloc[-1]
+            
+            # Get the 'Tomorrow_Gain' value from the last row of the window
             tomorrow_gain = window['Tomorrow_Gain'].iloc[-1]
+            
+            # Append the date, tomorrow's gain, and the sentence to the 'sentences' list
             sentences.append([date, tomorrow_gain, sentence])
+        
+        # Create a DataFrame from the list of sentences with specified column names
         return pd.DataFrame(sentences, columns=['Date', 'Tomorrow_Gain', 'Sentence'])
 
 if __name__ == "__main__":
