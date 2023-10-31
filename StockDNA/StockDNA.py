@@ -41,6 +41,15 @@ class StockDNA:
         # Extract the stock symbol from the CSV file's basename (filename without extension)
         return os.path.splitext(os.path.basename(csv_file))[0]
 
+    # @staticmethod
+    # def bin_and_generate_labels(df, column):
+    #     # Function to bin a column and generate labels
+    #     bin_count = 26  # Set the bin count to a constant value of 10
+    #     labels = [chr(97 + i) for i in range(bin_count)]  # Generate labels 'a' to 'j' based on bin count
+    #     df[column] = pd.cut(df[column], bins=bin_count, labels=labels)
+    #     return df
+
+
     @staticmethod
     def process_csv_file(stock_symbol, chunk_size):
         csv_file = stock_symbol + '.csv'
@@ -55,13 +64,17 @@ class StockDNA:
         if days_in_file % chunk_size != 0:
             raise ValueError(f"Number of days ({days_in_file}) is not a multiple of chunk size ({chunk_size})")
         
-        # Bin 'Open', 'High', 'Low', 'Close' into 10 bins and change the data
-        columns_to_bin = ['Open', 'High', 'Low', 'Close']
-        for column in columns_to_bin:
-            df[column] = pd.cut(df[column], bins=10, labels=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+        # Set the bin count
+        bin_count = 26
 
-        # Bin 'Volume' into 10 bins and change the data
-        df['Volume'] = pd.cut(df['Volume'], bins=10, labels=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
+        # Bin 'Open', 'High', 'Low', 'Close' into specified bins and change the data
+        columns_to_bin = ['Open', 'High', 'Low', 'Close']
+
+        for column in columns_to_bin:
+            df[column] = pd.cut(df[column], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
+
+        # Bin 'Volume' into specified bins and change the data
+        df['Volume'] = pd.cut(df['Volume'], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
 
         # Concatenate the binned columns into a new column named "word" with spaces and 'day'
         allColumns = columns_to_bin + ['Volume']
@@ -72,6 +85,7 @@ class StockDNA:
         df.to_csv(processed_filename, index=False)
 
         return df
+    
 
     @staticmethod
     def create_sentences_from_data(df):
