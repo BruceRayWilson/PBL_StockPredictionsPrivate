@@ -1,8 +1,18 @@
 import os
 import pandas as pd
+import multiprocessing
 
 class StockDNA:
     num_days = 7
+
+    @staticmethod
+    def process_single_csv(csv_file, chunk_size):
+        stock_symbol = StockDNA.get_stock_symbol(csv_file)
+        processed_df = StockDNA.process_csv_file(stock_symbol, chunk_size)
+        sentences_df = StockDNA.create_sentences_from_data(processed_df)
+
+        # Save the sentences dataframe to the 'processed_sentences' directory
+        sentences_df.to_csv(f'./processed_sentences/{stock_symbol}_sentences.csv', index=False)
 
     @staticmethod
     def exec(chunk_size):
@@ -19,16 +29,12 @@ class StockDNA:
         if not os.path.exists('./processed_sentences'):
             os.makedirs('./processed_sentences')
 
-        # Process each CSV file
-        for csv_file in csv_files:
-            stock_symbol = StockDNA.get_stock_symbol(csv_file)
-            processed_df = StockDNA.process_csv_file(stock_symbol, chunk_size)
-            sentences_df = StockDNA.create_sentences_from_data(processed_df)
-
-            # Save the sentences dataframe to the 'processed_sentences' directory
-            sentences_df.to_csv(f'./processed_sentences/{stock_symbol}_sentences.csv', index=False)
+        # Use multiprocessing to process CSV files concurrently
+        with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+            pool.starmap(StockDNA.process_single_csv, [(csv_file, chunk_size) for csv_file in csv_files])
 
         print("Stock DNA processing completed.")
+
 
     @staticmethod
     def get_stock_symbol(csv_file):
@@ -48,14 +54,14 @@ class StockDNA:
         # Verify that the number of days is a multiple of chunk size
         if days_in_file % chunk_size != 0:
             raise ValueError(f"Number of days ({days_in_file}) is not a multiple of chunk size ({chunk_size})")
-
-        # Bin 'Open', 'High', 'Low', 'Close' into 5 bins and change the data
+        
+        # Bin 'Open', 'High', 'Low', 'Close' into 10 bins and change the data
         columns_to_bin = ['Open', 'High', 'Low', 'Close']
         for column in columns_to_bin:
-            df[column] = pd.cut(df[column], bins=5, labels=['a', 'b', 'c', 'd', 'e'])
+            df[column] = pd.cut(df[column], bins=10, labels=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
 
-        # Bin 'Volume' into 5 bins and change the data
-        df['Volume'] = pd.cut(df['Volume'], bins=5, labels=['a', 'b', 'c', 'd', 'e'])
+        # Bin 'Volume' into 10 bins and change the data
+        df['Volume'] = pd.cut(df['Volume'], bins=10, labels=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])
 
         # Concatenate the binned columns into a new column named "word" with spaces and 'day'
         allColumns = columns_to_bin + ['Volume']
