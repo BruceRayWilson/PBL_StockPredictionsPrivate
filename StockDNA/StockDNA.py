@@ -66,9 +66,9 @@ class StockDNA:
         
         # Set the bin count
         bin_count = 26
-
-        # Bin 'Open', 'High', 'Low', 'Close' into specified bins and change the data
-        columns_to_bin = ['Open', 'High', 'Low', 'Close']
+        
+        # Bin 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60' into specified bins and change the data
+        columns_to_bin = ['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']
 
         for column in columns_to_bin:
             df[column] = pd.cut(df[column], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])

@@ -33,8 +33,11 @@ def master_data():
     if os.path.exists(master_csv_path):
         os.remove(master_csv_path)
 
-    # Loop through the alphabet from Q to Z
-    for letter in 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z':
+
+    # Generate a list of letters from 'Q' to 'Z'
+    letters = [chr(i) for i in range(ord('J'), ord('Z') + 1)]
+
+    for letter in letters:
         pattern = f"{letter}*.csv"
         files = glob.glob(pattern)
 
