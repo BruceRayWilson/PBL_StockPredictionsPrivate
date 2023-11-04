@@ -64,17 +64,23 @@ class StockDNA:
         if days_in_file % chunk_size != 0:
             raise ValueError(f"Number of days ({days_in_file}) is not a multiple of chunk size ({chunk_size})")
         
-        # Set the bin count (bins)
-        bin_count = 15
+        import string
 
         # Bin 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60' into specified bins and change the data
         columns_to_bin = ['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']
 
+        label_list = [chr(97 + i) for i in range(26)]  # 'a' to 'z'
+        label_list.extend([chr(97 + i) * 2 for i in range(26)])  # 'aa' to 'zz'
+
+        # Shorten the label list.
+        label_list = label_list[:32]
+        bin_count = len(label_list)
+
         for column in columns_to_bin:
-            df[column] = pd.cut(df[column], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
+            df[column] = pd.cut(df[column], bins=bin_count, labels=label_list)
 
         # Bin 'Volume' into specified bins and change the data
-        df['Volume'] = pd.cut(df['Volume'], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
+        df['Volume'] = pd.cut(df['Volume'], bins=bin_count, labels=label_list)
 
         # Concatenate the binned columns into a new column named "word" with spaces and 'day'
         allColumns = columns_to_bin + ['Volume']
