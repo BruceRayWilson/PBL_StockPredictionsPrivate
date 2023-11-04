@@ -64,8 +64,8 @@ class StockDNA:
         if days_in_file % chunk_size != 0:
             raise ValueError(f"Number of days ({days_in_file}) is not a multiple of chunk size ({chunk_size})")
         
-        # Set the bin count
-        bin_count = 10
+        # Set the bin count (bins)
+        bin_count = 15
 
         # Bin 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60' into specified bins and change the data
         columns_to_bin = ['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']
