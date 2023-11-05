@@ -76,7 +76,7 @@ class StockDNA:
         label_list.extend([chr(97 + i) * 2 for i in range(26)])  # 'aa' to 'zz'
 
         # Shorten the label list.
-        label_list = label_list[:32]
+        label_list = label_list[:15]
         bin_count = len(label_list)
 
         for column in columns_to_bin:

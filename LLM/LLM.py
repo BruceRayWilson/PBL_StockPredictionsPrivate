@@ -86,7 +86,7 @@ class LLM:
             learning_rate=2e-4,
             per_device_train_batch_size=256,
             per_device_eval_batch_size=256,
-            num_train_epochs=5,
+            num_train_epochs=1,
             weight_decay=0.01,
             evaluation_strategy = "epoch",
             logging_strategy="epoch"
@@ -218,7 +218,7 @@ class LLM:
         import torch
 
         # Load the pre-trained model and tokenizer
-        model_name = "Test_002"
+        model_name = "model_001"
         model = AutoModelForSequenceClassification.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
 
