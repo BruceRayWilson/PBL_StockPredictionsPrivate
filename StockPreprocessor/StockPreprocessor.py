@@ -2,12 +2,18 @@ import os
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
+from config_loader import load_config
+
+
+
 class StockPreprocessor:
     chunk_size = 42
 
     def __init__(self):
         self.input_directory = 'data'
         self.output_directory = 'preprocessed_data'
+        self.config = load_config()
+        self.rolling_windows = self.config['rolling_windows']
 
     def create_output_directory(self):
         if not os.path.exists(self.output_directory):
@@ -27,10 +33,12 @@ class StockPreprocessor:
         # Calculate Tomorrow_Gain as tomorrow's close divided by tomorrow's open
         df['Tomorrow_Gain'] = df['Close'].shift(-1) / df['Open'].shift(-1)
 
-        # Calculate rolling_close_2, rolling_close_5, and rolling_close_60
-        df['rolling_close_2'] = df['Close'].rolling(window=2).mean()
-        df['rolling_close_5'] = df['Close'].rolling(window=5).mean()
-        df['rolling_close_60'] = df['Close'].rolling(window=60).mean()
+        # List of rolling windows
+        rolling_windows = self.rolling_windows
+
+        # Calculate rolling mean for each window size
+        for window in rolling_windows:
+            df[f'rolling_close_{window}'] = df['Close'].rolling(window=window).mean()
 
         # Drop rows with NaN values
         df.dropna(inplace=True)
@@ -38,18 +46,27 @@ class StockPreprocessor:
         # Divide data into chunks of the specified size in reverse order
         chunks = [df[i:i + self.chunk_size] for i in range(df.shape[0] - self.chunk_size, -1, -self.chunk_size)]
 
+        # Dynamically generate rolling close column names based on rolling windows
+        rolling_close_columns = [f'rolling_close_{window}' for window in self.rolling_windows]
+
+        # Define the static columns
+        static_columns = ['Date', 'Open', 'High', 'Low', 'Close', 'Tomorrow_Gain', 'Volume']
+
         # Initialize an empty DataFrame to store the concatenated chunks
-        result_df = pd.DataFrame(columns=['Date', 'Open', 'High', 'Low', 'Close', 'Tomorrow_Gain', 'Volume', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60'])
+        # with dynamically generated rolling close columns
+        result_df = pd.DataFrame(columns=static_columns + rolling_close_columns)
 
         for chunk in chunks:
-            # Normalize 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', and 'rolling_close_60'
-            ohlc_data = chunk[['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']]
+            # Extract only the necessary columns, including dynamically determined rolling close columns
+            ohlc_data = chunk[['Open', 'High', 'Low', 'Close'] + rolling_close_columns]
             volume_data = chunk[['Volume']]
 
+            # Create scalers for normalization
             ohlc_scaler = MinMaxScaler()
             volume_scaler = MinMaxScaler()
 
-            chunk.loc[:, ['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']] = ohlc_scaler.fit_transform(ohlc_data)
+            # Normalize the OHLC and volume data
+            chunk.loc[:, ['Open', 'High', 'Low', 'Close'] + rolling_close_columns] = ohlc_scaler.fit_transform(ohlc_data)
             chunk.loc[:, ['Volume']] = volume_scaler.fit_transform(volume_data)
 
             # Append the chunk to the result DataFrame
