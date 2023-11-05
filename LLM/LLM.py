@@ -23,7 +23,7 @@ class LLM:
     @staticmethod
     def train() -> None:
         '''Trains LLM, evaluates on a validation set, and prints evaluation metrics.'''
-        print("LLM training and evaluation...")
+        print("\nLLM training and evaluation...")
 
         # Verify that 'results' is a directory and delete it if it exists
         if os.path.isdir("results"):
@@ -84,8 +84,8 @@ class LLM:
         training_args = TrainingArguments(
             output_dir="./results",
             learning_rate=2e-4,
-            per_device_train_batch_size=512,
-            per_device_eval_batch_size=512,
+            per_device_train_batch_size=256,
+            per_device_eval_batch_size=256,
             num_train_epochs=5,
             weight_decay=0.01,
             evaluation_strategy = "epoch",

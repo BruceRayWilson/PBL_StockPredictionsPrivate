@@ -8,6 +8,8 @@ import glob
 
 import argparse
 
+from config_loader import load_config
+
 
 from StockSymbolCollection.StockSymbolCollection import StockSymbolCollection
 from StockData.StockData import StockData
@@ -104,9 +106,15 @@ def add_args():
 def main() -> None:
     """Main function to execute the script"""
     args = add_args()
+
+
+    config = load_config()
+
+
+
     if args.menu:
         while True:
-            menu(args)
+            menu(args, config)
     else:
         if args.stock_symbol_verification:
             StockSymbolCollection.exec(args.train_base_filename)
@@ -117,7 +125,7 @@ def main() -> None:
         if args.preprocess:
             StockPreprocessor.exec()
         if args.stock_dna:
-            StockDNA.exec(StockPreprocessor.chunk_size)
+            StockDNA.exec(StockPreprocessor.chunk_size, config)
         if args.train_preparation:
             TrainPreparation.exec()
         if args.master_data:
@@ -130,7 +138,7 @@ def main() -> None:
     print("Done!")
 
 
-def menu(args) -> None:
+def menu(args, config) -> None:
     """
     Displays a menu for users who run the script without CLI arguments
     """
@@ -167,7 +175,7 @@ def menu(args) -> None:
         elif choice == '3':
             StockPreprocessor.exec()
         elif choice == '4':
-            StockDNA.exec(StockPreprocessor.chunk_size)
+            StockDNA.exec(StockPreprocessor.chunk_size, config)
         elif choice == '5':
             TrainPreparation.exec()
         elif choice == '6':

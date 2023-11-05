@@ -6,16 +6,16 @@ class StockDNA:
     num_days = 7
 
     @staticmethod
-    def process_single_csv(csv_file, chunk_size):
+    def process_single_csv(csv_file, chunk_size, config):
         stock_symbol = StockDNA.get_stock_symbol(csv_file)
-        processed_df = StockDNA.process_csv_file(stock_symbol, chunk_size)
+        processed_df = StockDNA.process_csv_file(stock_symbol, chunk_size, config)
         sentences_df = StockDNA.create_sentences_from_data(processed_df)
 
         # Save the sentences dataframe to the 'processed_sentences' directory
         sentences_df.to_csv(f'./processed_sentences/{stock_symbol}_sentences.csv', index=False)
 
     @staticmethod
-    def exec(chunk_size):
+    def exec(chunk_size, config):
         print("Stock DNA...")
 
         # Get a list of all CSV files in the preprocessed_data directory
@@ -31,7 +31,8 @@ class StockDNA:
 
         # Use multiprocessing to process CSV files concurrently
         with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-            pool.starmap(StockDNA.process_single_csv, [(csv_file, chunk_size) for csv_file in csv_files])
+            # Pass an iterable of argument tuples to 'starmap'
+            pool.starmap(StockDNA.process_single_csv, [(csv_file, chunk_size, config) for csv_file in csv_files])
 
         print("Stock DNA processing completed.")
 
@@ -41,17 +42,9 @@ class StockDNA:
         # Extract the stock symbol from the CSV file's basename (filename without extension)
         return os.path.splitext(os.path.basename(csv_file))[0]
 
-    # @staticmethod
-    # def bin_and_generate_labels(df, column):
-    #     # Function to bin a column and generate labels
-    #     bin_count = 26  # Set the bin count to a constant value of 10
-    #     labels = [chr(97 + i) for i in range(bin_count)]  # Generate labels 'a' to 'j' based on bin count
-    #     df[column] = pd.cut(df[column], bins=bin_count, labels=labels)
-    #     return df
-
 
     @staticmethod
-    def process_csv_file(stock_symbol, chunk_size):
+    def process_csv_file(stock_symbol, chunk_size, config):
         csv_file = stock_symbol + '.csv'
 
         # Read the CSV file
@@ -64,17 +57,33 @@ class StockDNA:
         if days_in_file % chunk_size != 0:
             raise ValueError(f"Number of days ({days_in_file}) is not a multiple of chunk size ({chunk_size})")
         
-        # Set the bin count (bins)
-        bin_count = 15
+        # import string
 
-        # Bin 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60' into specified bins and change the data
-        columns_to_bin = ['Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60']
+        # Assuming config['rolling_windows'] is a list of numbers like [2, 5, 60, ...]
+        rolling_windows = config['rolling_windows']
+
+        # Base columns that do not depend on rolling windows
+        base_columns = ['Open', 'High', 'Low', 'Close']
+
+        # Dynamically create rolling close columns based on rolling_windows
+        rolling_close_columns = [f'rolling_close_{window}' for window in rolling_windows]
+
+        # Combine base columns with rolling close columns
+        columns_to_bin = base_columns + rolling_close_columns
+        # Now columns_to_bin contains columns like 'Open', 'High', 'Low', 'Close', 'rolling_close_2', 'rolling_close_5', 'rolling_close_60', ...
+
+        label_list = [chr(97 + i) for i in range(26)]  # 'a' to 'z'
+        label_list.extend([chr(97 + i) * 2 for i in range(26)])  # 'aa' to 'zz'
+
+        # Shorten the label list.
+        label_list = label_list[:32]
+        bin_count = len(label_list)
 
         for column in columns_to_bin:
-            df[column] = pd.cut(df[column], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
+            df[column] = pd.cut(df[column], bins=bin_count, labels=label_list)
 
         # Bin 'Volume' into specified bins and change the data
-        df['Volume'] = pd.cut(df['Volume'], bins=bin_count, labels=[chr(97 + i) for i in range(bin_count)])
+        df['Volume'] = pd.cut(df['Volume'], bins=bin_count, labels=label_list)
 
         # Concatenate the binned columns into a new column named "word" with spaces and 'day'
         allColumns = columns_to_bin + ['Volume']
