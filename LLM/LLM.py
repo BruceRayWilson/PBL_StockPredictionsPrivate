@@ -3,6 +3,7 @@ from trl import SFTTrainer
 from peft import LoraConfig
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
+
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
@@ -19,6 +20,16 @@ import evaluate
 
 class LLM:
     """Class to manage Linear Level Models (LLM) for stock market data analysis"""
+
+    model = None
+    tokenizer = None
+
+    @classmethod
+    def _initialize_model_and_tokenizer(cls):
+        if cls.model is None or cls.tokenizer is None:
+            model_name = "model_001"
+            cls.model = AutoModelForSequenceClassification.from_pretrained(model_name)
+            cls.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     @staticmethod
     def train() -> None:
@@ -211,23 +222,17 @@ class LLM:
         df.to_csv(file_path, index=False)
 
 
-    @staticmethod
-    def predict_string(input_text: str) -> int:
+    @classmethod
+    def predict_string(cls, input_text: str) -> int:
         '''Performs prediction using the trained LLM model and returns the predicted class label.'''
-        from transformers import AutoModelForSequenceClassification, AutoTokenizer
-        import torch
-
-        # Load the pre-trained model and tokenizer
-        model_name = "model_001"
-        model = AutoModelForSequenceClassification.from_pretrained(model_name)
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        cls._initialize_model_and_tokenizer()
 
         # Tokenize the input text
-        tokens = tokenizer.encode_plus(input_text, return_tensors="pt", padding=True, truncation=True)
+        tokens = cls.tokenizer.encode_plus(input_text, return_tensors="pt", padding=True, truncation=True)
 
         # Perform inference
         with torch.no_grad():
-            output = model(**tokens)
+            output = cls.model(**tokens)
 
         # Post-process the output to get the predicted class label
         predicted_class = torch.argmax(output.logits, dim=1).item()
@@ -237,18 +242,17 @@ class LLM:
     @staticmethod
     def predict(directory_path="test_data"):
         """
-        Process all CSV files in the specified directory using the 'Sentence' column
-        and call the predict method for each sentence.
-
-        Args:
-            directory_path (str): The path to the directory containing CSV files.
+        Process all CSV files in the specified directory using the 'Sentence' column,
+        add predictions as a new column, and save the updated DataFrame to a new file.
         """
         # List all CSV files in the specified directory
         csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv")]
 
         # Iterate through each CSV file
         for csv_file in csv_files:
+            print(f"\nProcessing {csv_file}...")
             file_path = os.path.join(directory_path, csv_file)
+            new_file_path = os.path.join(directory_path, f"predicted_{csv_file}")
 
             # Read the CSV file into a DataFrame
             df = pd.read_csv(file_path)
@@ -258,9 +262,12 @@ class LLM:
                 print(f"Warning: 'Sentence' column not found in {csv_file}. Skipping...")
                 continue
 
-            # Process each sentence in the 'Sentence' column
-            for sentence in df['Sentence']:
-                predicted_class = LLM.predict_string(sentence)
-                # Do something with the predicted_class (e.g., store it or print it)
-                print(f"Sentence: {sentence}")
-                print(f"Predicted Class: {predicted_class}\n")
+            # Make predictions for each sentence in the 'Sentence' column
+            predictions = [LLM.predict_string(sentence) for sentence in df['Sentence']]
+
+            # Add predictions as a new column to the DataFrame
+            df['PredictedClass'] = predictions
+
+            # Save the updated DataFrame to a new CSV file
+            df.to_csv(new_file_path, index=False)
+            print(f"Updated file saved to {new_file_path}")
