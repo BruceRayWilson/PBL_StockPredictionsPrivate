@@ -239,16 +239,31 @@ class LLM:
 
         return predicted_class
 
+    import os
+    import pandas as pd
+
     @staticmethod
     def predict(directory_path="test_data"):
         """
         Process all CSV files in the specified directory using the 'Sentence' column,
         add predictions as a new column, and save the updated DataFrame to a new file.
+        Also calculate and save the average Tomorrow_Gain for PredictedClass 5, delete
+        old 'predicted_' files, and ensure they are not processed.
         """
-        # List all CSV files in the specified directory
-        csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv")]
 
-        # Iterate through each CSV file
+        # Delete existing 'predicted_' files to avoid confusion
+        for file in os.listdir(directory_path):
+            if file.startswith("predicted_"):
+                os.remove(os.path.join(directory_path, file))
+                print(f"Deleted {file}")
+
+        # List all CSV files in the specified directory that do not start with 'predicted_'
+        csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv") and not file.startswith("predicted_")]
+
+        # Initialize a list to hold the average gain results
+        average_gains = []
+
+        # Iterate through each non-predicted CSV file
         for csv_file in csv_files:
             print(f"\nProcessing {csv_file}...")
             file_path = os.path.join(directory_path, csv_file)
@@ -268,6 +283,35 @@ class LLM:
             # Add predictions as a new column to the DataFrame
             df['PredictedClass'] = predictions
 
+            # Rename the 'Gain' column to 'Class'.
+            df.rename(columns={'Gain': 'Class'}, inplace=True)
+
+            # Calculate the average 'Tomorrow_Gain' for rows where 'PredictedClass' is 5
+            # and 'Class' is in [3, 4, 5]
+            class_condition = df['Class'].isin([3, 4, 5])
+            predicted_class_condition = df['PredictedClass'] == 5
+            average_gain = df.loc[class_condition & predicted_class_condition, 'Tomorrow_Gain'].mean()
+
+            # Append the average gain and the base file name to the list
+            base_file_name = os.path.splitext(csv_file)[0]
+            average_gains.append((base_file_name, average_gain))
+
             # Save the updated DataFrame to a new CSV file
             df.to_csv(new_file_path, index=False)
             print(f"Updated file saved to {new_file_path}")
+
+        # Create a DataFrame from the average gains list
+        gains_df = pd.DataFrame(average_gains, columns=['BaseFileName', 'AverageGain'])
+
+        # Calculate the average of the average gains
+        overall_avg_gain = gains_df['AverageGain'].mean()
+
+        print(f'Overall Average: {overall_avg_gain}')
+
+        # Append a new row to gains_df with the average of averages
+        # gains_df = gains_df.append({'BaseFileName': 'Average of Averages', 'AverageGain': overall_avg_gain}, ignore_index=True)
+
+        # Save the average gains DataFrame to a CSV file
+        gains_file_path = os.path.join(directory_path, "average_gains.csv")
+        gains_df.to_csv(gains_file_path, index=False)
+        print(f"Average gains saved to {gains_file_path}")
