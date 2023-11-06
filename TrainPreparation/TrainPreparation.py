@@ -75,8 +75,7 @@ class TrainPreparation:
             # new_filename = new_filename.replace('csv', 'json')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
-            # df['text'] = '### Human: ' + df['Sentence'] + '\n\n### Assistant: ' + df['Gain'].astype(str) + '\n'
-            selected_columns = ['Sentence', 'Gain']
+            selected_columns = ['Sentence', 'Tomorrow_Gain', 'Gain']
             df = df[selected_columns]
             # df['Sentence'] = df['Sentence'].apply(lambda x: f'"{x}"')
             # df['Gain'] = df['Gain'].apply(lambda x: f'"{x}"')
