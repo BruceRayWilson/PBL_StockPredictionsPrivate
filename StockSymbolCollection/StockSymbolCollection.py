@@ -166,8 +166,8 @@ class StockSymbolCollection:
         print("Validating tickers...")
         collection_instance = cls(csv_filename)
         collection_instance.validate_tickers()
-        collection_instance.fetch_beta_values()
-        collection_instance.display_beta_values()
+        # collection_instance.fetch_beta_values()
+        # collection_instance.display_beta_values()
         print("Done validating tickers.")
 
 if __name__ == "__main__":

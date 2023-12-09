@@ -37,34 +37,6 @@ def master_data():
         os.remove(master_csv_path)
 
 
-    # Generate a list of letters from 'J' to 'Z'
-    letters = [chr(i) for i in range(ord('J'), ord('Z') + 1)]
-
-
-
-
-
-    # Define the target directory where files will be moved
-    target_directory = '../test_data'
-
-    # Ensure the target directory exists, if not, create it
-    os.makedirs(target_directory, exist_ok=True)
-
-    for letter in letters:
-        pattern = f"{letter}*.csv"
-        files = glob.glob(pattern)
-
-        if files:
-            print(f"Moving CSV files starting with the letter '{letter}' to '{target_directory}':")
-            for file in files:
-                # Construct the new path with the same file name in the target_directory
-                new_path = os.path.join(target_directory, os.path.basename(file))
-                # Move the file
-                shutil.move(file, new_path)
-                print(f"Moved '{file}' to '{new_path}'")
-
-
-
     csv_files = glob.glob("*.csv")
     if csv_files:
         # Copy header from the first CSV file to master.csv
