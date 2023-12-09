@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from typing import List
+from typing import List, Dict
 
 class TrainPreparation:
     # Default directories
@@ -15,17 +15,20 @@ class TrainPreparation:
         self.target_dir = target_dir
 
     @classmethod
-    def exec(cls) -> None:
+    def exec(cls, args) -> None:
         """Main execution method to prepare training data."""
+        print("Training data preparation started...")
         instance = cls()  # Instantiate a new instance
         instance.prepare_target_dir()
         all_gain_values = instance.collect_gain_values()
         bin_values = instance.calc_bin_edges(all_gain_values)
-        instance.process_files(bin_values)
+        instance.process_files(args, bin_values)
+        print("Training data preparation completed!")
 
     def prepare_target_dir(self) -> None:
         """Creates the target directory if it doesn't exist."""
         os.makedirs(self.target_dir, exist_ok=True)
+        print(f"Output directory: {self.target_dir}")
 
     def collect_gain_values(self) -> List[float]:
         """
@@ -56,7 +59,7 @@ class TrainPreparation:
                     for i in range(len(self.CATEGORY_LABELS) + 1)]
         return bin_edges
 
-    def process_files(self, bin_values: List[float]) -> None:
+    def process_files(self, args: Dict, bin_values: List[float]) -> None:
         """
         Process each file in the data directory:
         1. Categorize 'Tomorrow_Gain' using the bin values.
@@ -64,29 +67,29 @@ class TrainPreparation:
         3. Save the modified dataframe to the target directory without the "_sentences" suffix.
 
         Args:
+            args (Dict): Dictionary containing function arguments including 'predict_start_time'.
             bin_values (List[float]): Bin edges for categorizing the gain values.
         """
         files = os.listdir(self.data_dir)
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
-            
+
+            df = df[df['Date'] < args.predict_start_time]
+
+
+
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
-            # new_filename = new_filename.replace('csv', 'json')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
             selected_columns = ['Sentence', 'Tomorrow_Gain', 'Gain']
             df = df[selected_columns]
-            # df['Sentence'] = df['Sentence'].apply(lambda x: f'"{x}"')
-            # df['Gain'] = df['Gain'].apply(lambda x: f'"{x}"')
-            # df['Sentence'] = df['Sentence'].apply(lambda x: f'"{x}"' if '"' not in x else x)
-            # df['Gain'] = df['Gain'].apply(lambda x: f'"{x}"' if '"' not in x else x)
             df['Sentence'] = df['Sentence'].astype(str)
             df['Gain'] = df['Gain'].astype(str)
             # print(df.dtypes)
 
+
             df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
-            # df.to_json(os.path.join(self.target_dir, new_filename), orient='records', lines=True)
 
 
 def main() -> None:

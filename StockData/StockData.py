@@ -70,12 +70,17 @@ class StockData:
             bool: Always returns True (as in the original).
         """
         print("Processing data...")
+        print(f"start_time: {start_time}, end_time: {end_time}")
+
+
         # # Read the stock symbols from the CSV file
         # with open(stock_symbols_path, 'r') as file:
         #     reader = csv.reader(file)
         #     stock_symbols = [row[0] for row in reader]
 
         stock_data_instance = cls(stock_symbols_path, start_time, end_time)
+        print(f"Output directory: {stock_data_instance.data_dir}")
+
         for symbol in stock_data_instance.stock_symbols:
             df_stock_data = stock_data_instance._get_stock_data(symbol)
         

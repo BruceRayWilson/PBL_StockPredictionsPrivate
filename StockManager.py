@@ -2,6 +2,7 @@ import argparse
 from datetime import datetime
 import pandas as pd
 import sys
+import shutil
 
 import os
 import glob
@@ -42,9 +43,6 @@ def master_data():
 
 
 
-    # import glob
-    # import os
-    import shutil
 
     # Define the target directory where files will be moved
     target_directory = '../test_data'
@@ -108,8 +106,13 @@ def add_args():
                         help="Flag to collect stock data (default: %(default)s)")
     parser.add_argument("-st", "--start_time", default="2010-01-01",
                         help="Start time for StockData in the format YYYY-MM-DD (default: %(default)s)")
-    parser.add_argument("-et", "--end_time", default="2023-10-01",
+    parser.add_argument("-et", "--end_time", default="2023-12-01",
                         help="End time for StockData in the format YYYY-MM-DD (default: %(default)s)")
+    # Add new arguments for prediction start and end times with the last month's dates as defaults
+    parser.add_argument("--predict_start_time", default="2023-11-01",
+                        help="Start time for prediction in the format YYYY-MM-DD (default: last month's start date)")
+    parser.add_argument("--predict_end_time", default="2023-12-01",
+                        help="End time for prediction in the format YYYY-MM-DD (default: last month's end date)")
     parser.add_argument("-pp", "--preprocess", action='store_true', help="Execute StockPreprocessor (default: %(default)s)")
     parser.add_argument("-sdna", "--stock_dna", action='store_true', help="Execute Stock DNA (default: %(default)s)")
     parser.add_argument("-tp", "--train_preparation", action='store_true', help="Execute Train Preparation (default: %(default)s)")
@@ -146,7 +149,7 @@ def main() -> None:
         if args.stock_dna:
             StockDNA.exec(StockPreprocessor.chunk_size, config)
         if args.train_preparation:
-            TrainPreparation.exec()
+            TrainPreparation.exec(args)
         if args.master_data:
             master_data()
         if args.train:
@@ -196,7 +199,7 @@ def menu(args, config) -> None:
         elif choice == '4':
             StockDNA.exec(StockPreprocessor.chunk_size, config)
         elif choice == '5':
-            TrainPreparation.exec()
+            TrainPreparation.exec(args)
         elif choice == '6':
             master_data()
         elif choice == '7':  # Logic for LLM choices
