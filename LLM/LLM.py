@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
+import torch
 import shutil
 from datasets import load_dataset, Dataset
 from trl import SFTTrainer
@@ -223,45 +224,43 @@ class LLM:
 
 
     @classmethod
-    def predict_string(cls, input_text: str) -> int:
-        '''Performs prediction using the trained LLM model and returns the predicted class label.'''
+    def predict_strings(cls, input_texts: list) -> list:
+        '''Performs prediction on a batch of texts and returns the predicted class labels.'''
         cls._initialize_model_and_tokenizer()
 
-        # Tokenize the input text
-        tokens = cls.tokenizer.encode_plus(input_text, return_tensors="pt", padding=True, truncation=True)
+        # Tokenize the input texts in batch
+        tokens = cls.tokenizer(input_texts, return_tensors="pt", padding=True, truncation=True)
 
         # Perform inference
         with torch.no_grad():
-            output = cls.model(**tokens)
+            outputs = cls.model(**tokens)
 
-        # Post-process the output to get the predicted class label
-        predicted_class = torch.argmax(output.logits, dim=1).item()
+        # Post-process the outputs to get the predicted class labels
+        predicted_classes = torch.argmax(outputs.logits, dim=1).tolist()
 
-        return predicted_class
-
-    import os
-    import pandas as pd
+        return predicted_classes
 
     @staticmethod
     def predict(directory_path="test_data"):
         """
-        Process all CSV files in the specified directory using the 'Sentence' column,
-        add predictions as a new column, and save the updated DataFrame to a new file.
-        Also calculate and save the average Tomorrow_Gain for PredictedClass 5, delete
-        old 'predicted_' files, and ensure they are not processed.
+        Process all CSV files in the specified directory, add predictions as a new column,
+        and save the updated DataFrame to a new file. Calculate and save the average 
+        Tomorrow_Gain for PredictedClass 5, and delete old 'predicted_' files.
         """
 
         # Delete existing 'predicted_' files to avoid confusion
         for file in os.listdir(directory_path):
             if file.startswith("predicted_"):
                 os.remove(os.path.join(directory_path, file))
-                print(f"Deleted {file}")
 
-        # List all CSV files in the specified directory that do not start with 'predicted_'
+        # List all CSV files in the directory that do not start with 'predicted_'
         csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv") and not file.startswith("predicted_")]
 
         # Initialize a list to hold the average gain results
         average_gains = []
+
+        # Initialize model and tokenizer once, outside the loop
+        LLM._initialize_model_and_tokenizer()
 
         # Iterate through each non-predicted CSV file
         for csv_file in csv_files:
@@ -277,20 +276,20 @@ class LLM:
                 print(f"Warning: 'Sentence' column not found in {csv_file}. Skipping...")
                 continue
 
-            # Make predictions for each sentence in the 'Sentence' column
-            predictions = [LLM.predict_string(sentence) for sentence in df['Sentence']]
+            # Predict in batches instead of single sentences
+            predictions = LLM.predict_strings(df['Sentence'].tolist())
 
             # Add predictions as a new column to the DataFrame
             df['PredictedClass'] = predictions
 
-            # Rename the 'Gain' column to 'Class'.
-            df.rename(columns={'Gain': 'Class'}, inplace=True)
+            # Rename the 'Gain' column to 'Class' if it exists
+            if 'Gain' in df.columns:
+                df.rename(columns={'Gain': 'Class'}, inplace=True)
 
-            # Calculate the average 'Tomorrow_Gain' for rows where 'PredictedClass' is 5
-            # and 'Class' is in [3, 4, 5]
-            class_condition = df['Class'].isin([3, 4, 5])
-            predicted_class_condition = df['PredictedClass'] == 5
-            average_gain = df.loc[class_condition & predicted_class_condition, 'Tomorrow_Gain'].mean()
+            # Calculate the average 'Tomorrow_Gain'
+            # TODO: This does not seem to be correct.
+            avg_gain_cond = (df['Class'].isin([2, 3, 4, 5])) & (df['PredictedClass'] == 5)
+            average_gain = df.loc[avg_gain_cond, 'Tomorrow_Gain'].mean()
 
             # Append the average gain and the base file name to the list
             base_file_name = os.path.splitext(csv_file)[0]
@@ -300,7 +299,7 @@ class LLM:
             df.to_csv(new_file_path, index=False)
             print(f"Updated file saved to {new_file_path}")
 
-        # Create a DataFrame from the average gains list
+        # Save the average gains to a CSV file
         gains_df = pd.DataFrame(average_gains, columns=['BaseFileName', 'AverageGain'])
 
         # Calculate the average of the average gains
