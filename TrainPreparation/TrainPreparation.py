@@ -88,9 +88,6 @@ class TrainPreparation:
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
 
-            # # Only take the train data.
-            # df = df[df['Date'] < args.predict_start_time]
-
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
             
