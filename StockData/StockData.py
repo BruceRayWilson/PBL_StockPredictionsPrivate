@@ -2,13 +2,13 @@ import yfinance as yf
 import pandas as pd
 import os
 from typing import List
-from datetime import datetime
+from datetime import datetime, timedelta
 import csv
 
 # import MeaningfulData
 
-class StockData:
-    data_dir = "data_stocks"
+# class StockData:
+#     data_dir = "data_stocks"
 
 class StockData:
     def __init__(self, stock_symbols_path: str, start_time: datetime, end_time: datetime):
@@ -22,7 +22,9 @@ class StockData:
 
         """
         self.start_time = start_time
-        self.end_time = end_time
+        # Add 20 hours to the end time for opening bell and then some.
+        opening_bell_offset = 20
+        self.end_time = end_time + timedelta(hours=opening_bell_offset)
 
         # Read the stock symbols from the CSV file
         with open(stock_symbols_path, 'r') as file:
