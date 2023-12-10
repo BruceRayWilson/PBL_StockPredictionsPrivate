@@ -7,9 +7,6 @@ import csv
 
 # import MeaningfulData
 
-# class StockData:
-#     data_dir = "data_stocks"
-
 class StockData:
     def __init__(self, stock_symbols_path: str, start_time: datetime, end_time: datetime):
         """
@@ -25,6 +22,7 @@ class StockData:
         # Add 20 hours to the end time for opening bell and then some.
         opening_bell_offset = 20
         self.end_time = end_time + timedelta(hours=opening_bell_offset)
+        print(f"start_time: {self.start_time}, end_time: {self.end_time}")
 
         # Read the stock symbols from the CSV file
         with open(stock_symbols_path, 'r') as file:
@@ -72,7 +70,6 @@ class StockData:
             bool: Always returns True (as in the original).
         """
         print("Processing data...")
-        print(f"start_time: {start_time}, end_time: {end_time}")
 
 
         # # Read the stock symbols from the CSV file
