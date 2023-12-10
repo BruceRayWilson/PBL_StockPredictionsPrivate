@@ -4,6 +4,9 @@ import multiprocessing
 
 class StockDNA:
     num_days = 7
+    input_dir = './preprocessed_data'                           # <-- Input directory
+    output_dir_data = './processed_data'                        # <-- Output directory data
+    output_dir_sentences = './processed_sentences'              # <-- Output directory sentences
 
     @staticmethod
     def process_single_csv(csv_file, chunk_size, config):
@@ -12,22 +15,22 @@ class StockDNA:
         sentences_df = StockDNA.create_sentences_from_data(processed_df)
 
         # Save the sentences dataframe to the 'processed_sentences' directory
-        sentences_df.to_csv(f'./processed_sentences/{stock_symbol}_sentences.csv', index=False)
+        sentences_df.to_csv(f'{StockDNA.output_dir_sentences}/{stock_symbol}_sentences.csv', index=False)
 
     @staticmethod
     def exec(chunk_size, config):
         print("Stock DNA...")
 
-        # Get a list of all CSV files in the preprocessed_data directory
-        csv_files = [file for file in os.listdir('./preprocessed_data') if file.endswith('.csv')]
+        # Get a list of all CSV files in the input directory
+        csv_files = [file for file in os.listdir(StockDNA.input_dir) if file.endswith('.csv')]
 
         # Create the 'processed_data' directory if it doesn't exist
-        if not os.path.exists('./processed_data'):
-            os.makedirs('./processed_data')
+        if not os.path.exists(StockDNA.output_dir_data):
+            os.makedirs(StockDNA.output_dir_data)
 
         # Create the 'processed_sentences' directory if it doesn't exist
-        if not os.path.exists('./processed_sentences'):
-            os.makedirs('./processed_sentences')
+        if not os.path.exists(StockDNA.output_dir_sentences):
+            os.makedirs(StockDNA.output_dir_sentences)
 
         # Use multiprocessing to process CSV files concurrently
         with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
@@ -48,7 +51,7 @@ class StockDNA:
         csv_file = stock_symbol + '.csv'
 
         # Read the CSV file
-        df = pd.read_csv(f'./preprocessed_data/{csv_file}')
+        df = pd.read_csv(f'{StockDNA.input_dir}/{csv_file}')
 
         # Get the number of days in the CSV file
         days_in_file = len(df)
@@ -90,7 +93,7 @@ class StockDNA:
         df['Word'] = df[allColumns].apply(lambda x: ' '.join(map(str, x)) + ' day', axis=1)
 
         # Save the processed data to the 'processed_data' directory with the stock symbol as the filename
-        processed_filename = f'./processed_data/{stock_symbol}.csv'
+        processed_filename = f'{StockDNA.output_dir_data}/{stock_symbol}.csv'
         df.to_csv(processed_filename, index=False)
 
         return df

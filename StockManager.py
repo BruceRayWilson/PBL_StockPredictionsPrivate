@@ -6,6 +6,7 @@ import shutil
 
 import os
 import glob
+import csv
 
 import argparse
 
@@ -22,7 +23,6 @@ from LLM.LLM import LLM
 
 
 def master_data():
-
     print("Starting to create the master.csv file...")
 
     os.chdir("train_data")  # Move to the 'train_data' directory
@@ -36,22 +36,20 @@ def master_data():
     if os.path.exists(master_csv_path):
         os.remove(master_csv_path)
 
-
     csv_files = glob.glob("*.csv")
     if csv_files:
-        # Copy header from the first CSV file to master.csv
-        with open(csv_files[0], 'r') as first_csv:
-            header = first_csv.readline()
-            with open(master_csv_path, 'w') as master:
-                master.write(header)
-
-        # Append the content (excluding headers) of each CSV file to master.csv
-        with open(master_csv_path, 'a') as master:
+        # Process each CSV file
+        with open(master_csv_path, 'w', newline='') as master:
+            master_writer = csv.writer(master)
+            # Write header only once
+            master_writer.writerow(['Sentence', 'Tomorrow_Gain', 'Gain'])
+            
             for file in csv_files:
                 with open(file, 'r') as csv_file:
-                    csv_file.readline()  # Skip header
-                    for line in csv_file:
-                        master.write(line)
+                    csv_reader = csv.DictReader(csv_file)
+                    for row in csv_reader:
+                        # Extract only the required columns
+                        master_writer.writerow([row['Sentence'], row['Tomorrow_Gain'], row['Gain']])
 
     os.chdir("..")
 

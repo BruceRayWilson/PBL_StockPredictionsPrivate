@@ -5,8 +5,8 @@ from typing import List, Dict
 
 class TrainPreparation:
     # Default directories
-    DATA_DIR: str = 'processed_sentences'
-    TARGET_DIR: str = 'train_data'
+    DATA_DIR: str = 'processed_sentences'                       # <-- Input Directory
+    TARGET_DIR: str = 'train_data'                              # <-- Output Directory
     # Categories for labeling data
     CATEGORY_LABELS: List[str] = ['0', '1', '2', '3', '4', '5']
 
@@ -26,9 +26,19 @@ class TrainPreparation:
         print("Training data preparation completed!")
 
     def prepare_target_dir(self) -> None:
-        """Creates the target directory if it doesn't exist."""
+        """Creates the target directory if it doesn't exist and removes all files."""
         os.makedirs(self.target_dir, exist_ok=True)
         print(f"Output directory: {self.target_dir}")
+
+        # Remove all files from the target directory
+        for filename in os.listdir(self.target_dir):
+            file_path = os.path.join(self.target_dir, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+            except Exception as e:
+                print(f"Error deleting {file_path}: {str(e)}")
+
 
     def collect_gain_values(self) -> List[float]:
         """
@@ -76,13 +86,11 @@ class TrainPreparation:
 
             df = df[df['Date'] < args.predict_start_time]
 
-
-
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
             
             df['Gain'] = pd.cut(df['Tomorrow_Gain'], bins=bin_values, labels=self.CATEGORY_LABELS)
-            selected_columns = ['Sentence', 'Tomorrow_Gain', 'Gain']
+            selected_columns = ['Date', 'Sentence', 'Tomorrow_Gain', 'Gain']
             df = df[selected_columns]
             df['Sentence'] = df['Sentence'].astype(str)
             df['Gain'] = df['Gain'].astype(str)

@@ -10,8 +10,8 @@ class StockPreprocessor:
     chunk_size = 42
 
     def __init__(self):
-        self.input_directory = 'data'
-        self.output_directory = 'preprocessed_data'
+        self.input_directory = 'data'                       # <-- Input Directory
+        self.output_directory = 'preprocessed_data'         # <-- Output Directory
         self.config = load_config()
         self.rolling_windows = self.config['rolling_windows']
 
