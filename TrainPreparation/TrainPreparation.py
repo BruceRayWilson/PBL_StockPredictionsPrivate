@@ -6,33 +6,37 @@ from typing import List, Dict
 class TrainPreparation:
     # Default directories
     DATA_DIR: str = 'processed_sentences'                       # <-- Input Directory
-    TARGET_DIR: str = 'train_data'                              # <-- Output Directory
+    TARGET_DIR_TRAIN: str = 'train_data'                        # <-- Train Output Directory
+    TARGET_DIR_TEST:  str = 'test_data'                         # <-- Test Output Directory
+
     # Categories for labeling data
     CATEGORY_LABELS: List[str] = ['0', '1', '2', '3', '4', '5']
 
-    def __init__(self, data_dir: str = DATA_DIR, target_dir: str = TARGET_DIR) -> None:
+    def __init__(self, data_dir: str = DATA_DIR, target_dir_train: str = TARGET_DIR_TRAIN, target_dir_test: str = TARGET_DIR_TEST) -> None:
         self.data_dir = data_dir
-        self.target_dir = target_dir
+        self.target_dir_train = target_dir_train
+        self.target_dir_test = target_dir_test
 
     @classmethod
     def exec(cls, args) -> None:
         """Main execution method to prepare training data."""
         print("Training data preparation started...")
         instance = cls()  # Instantiate a new instance
-        instance.prepare_target_dir()
+        instance.prepare_dir(instance.target_dir_train)
+        instance.prepare_dir(instance.target_dir_test)
         all_gain_values = instance.collect_gain_values()
         bin_values = instance.calc_bin_edges(all_gain_values)
         instance.process_files(args, bin_values)
         print("Training data preparation completed!")
 
-    def prepare_target_dir(self) -> None:
+    def prepare_dir(self, dir) -> None:
         """Creates the target directory if it doesn't exist and removes all files."""
-        os.makedirs(self.target_dir, exist_ok=True)
-        print(f"Output directory: {self.target_dir}")
+        os.makedirs(dir, exist_ok=True)
+        print(f"Output directory: {dir}")
 
         # Remove all files from the target directory
-        for filename in os.listdir(self.target_dir):
-            file_path = os.path.join(self.target_dir, filename)
+        for filename in os.listdir(dir):
+            file_path = os.path.join(dir, filename)
             try:
                 if os.path.isfile(file_path):
                     os.remove(file_path)
@@ -84,7 +88,8 @@ class TrainPreparation:
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
 
-            df = df[df['Date'] < args.predict_start_time]
+            # # Only take the train data.
+            # df = df[df['Date'] < args.predict_start_time]
 
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
@@ -97,7 +102,20 @@ class TrainPreparation:
             # print(df.dtypes)
 
 
-            df.to_csv(os.path.join(self.target_dir, new_filename), index=False)
+
+            last_row = df.tail(1)
+            print(last_row['Date'])
+            print(f'args.predict_start_time: {args.predict_start_time}')
+
+
+
+            # Only take the train data.
+            df_train = df[df['Date'] < args.predict_start_time].copy()
+            df_train.to_csv(os.path.join(self.target_dir_train, new_filename), index=False)
+
+            # Only take the train data.
+            df_test = df[df['Date'] >= args.predict_start_time].copy()
+            df_test.to_csv(os.path.join(self.target_dir_test, new_filename), index=False)
 
 
 def main() -> None:
