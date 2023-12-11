@@ -40,8 +40,11 @@ class StockPreprocessor:
         for window in rolling_windows:
             df[f'rolling_close_{window}'] = df['Close'].rolling(window=window).mean()
 
-        # Drop rows with NaN values
-        df.dropna(inplace=True)
+        # # Drop rows with NaN values
+        # df.dropna(inplace=True)
+
+        # Drop rows with NaN values in all columns except 'Tomorrow_Gain'
+        df.dropna(subset=df.columns.difference(['Tomorrow_Gain']), inplace=True)
 
         # Divide data into chunks of the specified size in reverse order
         chunks = [df[i:i + self.chunk_size] for i in range(df.shape[0] - self.chunk_size, -1, -self.chunk_size)]
@@ -71,6 +74,7 @@ class StockPreprocessor:
 
             # Append the chunk to the result DataFrame
             result_df = pd.concat([result_df, chunk])
+
 
         # Sort the result DataFrame by 'Date'
         result_df.sort_values(by=['Date'], inplace=True)

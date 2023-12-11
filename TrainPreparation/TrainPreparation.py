@@ -87,6 +87,10 @@ class TrainPreparation:
         files = os.listdir(self.data_dir)
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
+            
+            last_row = df.tail(1)
+            print(f"Date: {last_row['Date']}")
+
 
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
@@ -98,19 +102,15 @@ class TrainPreparation:
             df['Gain'] = df['Gain'].astype(str)
             # print(df.dtypes)
 
-
-
-            last_row = df.tail(1)
-            print(last_row['Date'])
-            print(f'args.predict_start_time: {args.predict_start_time}')
-
-
+            # last_row = df.tail(1)
+            # print(last_row['Date'])
+            # print(f'args.predict_start_time: {args.predict_start_time}')
 
             # Only take the train data.
             df_train = df[df['Date'] < args.predict_start_time].copy()
             df_train.to_csv(os.path.join(self.target_dir_train, new_filename), index=False)
 
-            # Only take the train data.
+            # Only take the test data.
             df_test = df[df['Date'] >= args.predict_start_time].copy()
             df_test.to_csv(os.path.join(self.target_dir_test, new_filename), index=False)
 

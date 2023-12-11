@@ -255,6 +255,8 @@ class LLM:
 
         # List all CSV files in the directory that do not start with 'predicted_'
         csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv") and not file.startswith("predicted_")]
+        csv_files = sorted(csv_files)
+
 
         # Initialize a list to hold the average gain results
         average_gains = []
@@ -287,8 +289,8 @@ class LLM:
                 df.rename(columns={'Gain': 'Class'}, inplace=True)
 
             # Calculate the average 'Tomorrow_Gain'
-            # TODO: This does not seem to be correct.
-            avg_gain_cond = (df['Class'].isin([2, 3, 4, 5])) & (df['PredictedClass'] == 5)
+            # TODO: This does not seem to be correct.  It is correct.
+            avg_gain_cond = (df['Class'].isin([0, 1, 2, 3, 4, 5])) & (df['PredictedClass'] == 5)
             average_gain = df.loc[avg_gain_cond, 'Tomorrow_Gain'].mean()
 
             # Append the average gain and the base file name to the list

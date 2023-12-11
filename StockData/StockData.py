@@ -4,6 +4,7 @@ import os
 from typing import List
 from datetime import datetime, timedelta
 import csv
+import shutil
 
 # import MeaningfulData
 
@@ -29,10 +30,11 @@ class StockData:
             reader = csv.reader(file)
             self.stock_symbols = [row[0] for row in reader]
 
-        # Create the data directory if it doesn't exist
-        self.data_dir = "data"  # Assuming the data directory name is 'data'
-        if not os.path.exists(self.data_dir):
-            os.makedirs(self.data_dir)
+        # Create the data directory by deleting it if it exists first
+        self.data_dir = "data"
+        if os.path.exists(self.data_dir):
+            shutil.rmtree(self.data_dir)
+        os.makedirs(self.data_dir)
 
 
     def _get_stock_data(self, symbol: str):
@@ -49,6 +51,7 @@ class StockData:
         if not os.path.exists(filepath):
             print(f'File {filepath} does not exist.  Gathering stock data now.')
             symbol_ticker = yf.Ticker(symbol)
+            self.end_time = None
             df_symbol = symbol_ticker.history(start=self.start_time, end=self.end_time)
             df_symbol.to_csv(filepath)
 
