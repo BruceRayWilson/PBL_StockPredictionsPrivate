@@ -93,6 +93,60 @@ class PredictionResults:
         print("Calculation of gains done.")
 
     @classmethod
+    def bar_plot(cls) -> None:
+        import matplotlib.pyplot as plt
+        import pandas as pd
+
+        # Making a copy of the dataframe
+        local_df = cls.filtered_df.copy()
+
+        # Subtract 1 from 'PercentGain' in the local copy
+        local_df['PercentGain'] -= 1
+
+        plt.figure(figsize=(12, 8))
+        plt.bar(local_df['Symbol'], local_df['PercentGain'], color='blue')
+        plt.title('Percent Gain of Different Stocks on a Specific Day')
+        plt.xlabel('Symbol')
+        plt.ylabel('Percent Gain')
+        plt.xticks(rotation=90)  # Rotates the x-axis labels for better readability
+        plt.grid(axis='y')
+        plt.tight_layout()
+
+        # If you want to save the plot
+        plt.savefig('stock_percent_gain_plot.png')
+
+        # To display the plot
+        plt.show()
+        plt.close()
+
+
+    @classmethod
+    def plot_percent_gain_distribution(cls, df):
+        """
+        Class method to plot the distribution of percent gain for stocks.
+
+        :param df: DataFrame containing the stock data with a 'PercentGain' column.
+        """
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+
+        plt.figure(figsize=(10, 6))
+        sns.distplot(df['PercentGain'], bins=20, kde=True)
+        plt.title('Distribution of Percent Gain for Stocks')
+        plt.xlabel('Percent Gain')
+        plt.ylabel('Density')
+        plt.grid(True)
+        plt.tight_layout()
+
+        # If you want to save the plot
+        plt.savefig('percent_gain_distribution.png')
+
+        # To display the plot
+        plt.show()
+        plt.close()
+
+
+    @classmethod
     def save_results(cls) -> None:
         ''' This method saves the results to a CSV file. '''
         cls.filtered_df.to_csv('final_predictions.csv', index=False)
@@ -103,6 +157,8 @@ class PredictionResults:
         ''' This classmethod checks the stock data prediction results and saves the final calculations in a CSV file. '''
         cls.init_instance()
         cls.compute_gains()
+        cls.bar_plot()
+        cls.plot_percent_gain_distribution(cls.filtered_df)
         cls.save_results()
 
 
