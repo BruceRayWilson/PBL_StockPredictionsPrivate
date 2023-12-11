@@ -316,3 +316,50 @@ class LLM:
         gains_file_path = os.path.join(directory_path, "average_gains.csv")
         gains_df.to_csv(gains_file_path, index=False)
         print(f"Average gains saved to {gains_file_path}")
+
+    @staticmethod
+    def true_predict(directory_path="."):
+        """
+        Process the 'predictions_input.csv' file in the specified directory, add predictions as a new column,
+        and save the updated DataFrame to a new file.
+        """
+
+        input_file_path = os.path.join(directory_path, "predictions_input.csv")
+        # Assert that the file does not exist
+        assert os.path.exists(input_file_path), f"The file {input_file_path} should exist."
+
+        output_file_path = os.path.join(directory_path, "predictions_output.csv")
+
+        # Check if the file exists and delete it if it does
+        if os.path.exists(output_file_path):
+            os.remove(output_file_path)
+
+
+
+
+        # Initialize model and tokenizer once, outside the loop
+        LLM._initialize_model_and_tokenizer()
+
+    
+        print(f"\nProcessing {input_file_path}...")
+
+        # Read the CSV file into a DataFrame
+        df = pd.read_csv(input_file_path)
+
+        # Ensure the 'Sentence' column exists in the DataFrame
+        assert 'Sentence' in df.columns, f"ERROR: 'Sentence' column not found in {input_file_path}."
+
+        # Predict in batches instead of single sentences
+        predictions = LLM.predict_strings(df['Sentence'].tolist())
+
+        # Add predictions as a new column to the DataFrame
+        df['PredictedClass'] = predictions
+
+
+
+
+
+
+        # Save the updated DataFrame to a new CSV file
+        df.to_csv(output_file_path, index=False)
+        print(f"Updated file saved to {output_file_path}")

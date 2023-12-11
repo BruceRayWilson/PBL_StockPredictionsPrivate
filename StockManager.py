@@ -126,6 +126,7 @@ def main() -> None:
             LLM.train()
         if args.predict:
             LLM.predict()
+            LLM.true_predict()
 
     print("Done!")
 
