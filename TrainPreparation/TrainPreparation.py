@@ -89,23 +89,40 @@ class TrainPreparation:
         1. Categorize 'Tomorrow_Gain' using the bin values.
         2. Construct a new 'text' column.
         3. Save the modified dataframe to the target directory without the "_sentences" suffix.
+        4. Append the last row of each file to a new DataFrame 'df_last_rows'.
 
         Args:
             args (Dict): Dictionary containing function arguments including 'predict_start_time'.
             bin_values (List[float]): Bin edges for categorizing the gain values.
         """
         files = os.listdir(self.data_dir)
+        files.sort()
+
+        # Initialize a list for storing the last rows
+        last_rows = []
+
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
+
+            symbol = os.path.splitext(file)[0]
+            # Removing '_sentences' from the variable
+            symbol = symbol.replace('_sentences', '')
+
             
-            # Remove and save the last row
-            last_row = df.tail(1)
-            # date = last_row['Date']
-            # print(f"\nDate: {date}")
 
-            # Remove the last row.
+            last_row = df.tail(1).values.tolist()[0]
+
+            # Replacing the second element of the list with the symbol variable
+            last_row[1] = symbol
+
+
+
+
+
+            last_rows.append(last_row)
+
+            # Remove the last row from the current DataFrame
             df = df.iloc[:-1]
-
 
             # Remove '_sentences' from filename if it exists
             new_filename = file.replace('_sentences', '')
@@ -124,6 +141,15 @@ class TrainPreparation:
             df_test = df[df['Date'] >= args.predict_start_time].copy()
             df_test.to_csv(os.path.join(self.target_dir_test, new_filename), index=False)
 
+        # Create a DataFrame from the list of last rows
+        # df_last_rows = pd.DataFrame().append(last_rows, ignore_index=True)
+        # collapsed_last_rows = np.sum(last_rows, axis=1)
+        df_last_rows = pd.DataFrame(last_rows, columns=['Date', 'Symbol', 'Sentence'])
+
+
+
+        # Optionally, you can save df_last_rows to a file or return it
+        df_last_rows.to_csv('predictions_input.csv', index=False)
 
 def main() -> None:
     TrainPreparation.exec()
