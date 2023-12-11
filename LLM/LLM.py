@@ -307,7 +307,7 @@ class LLM:
         # Calculate the average of the average gains
         overall_avg_gain = gains_df['AverageGain'].mean()
 
-        print(f'Overall Average: {overall_avg_gain}')
+        print(f'\n\nOverall Average: {overall_avg_gain}')
 
         # Append a new row to gains_df with the average of averages
         # gains_df = gains_df.append({'BaseFileName': 'Average of Averages', 'AverageGain': overall_avg_gain}, ignore_index=True)
@@ -324,6 +324,8 @@ class LLM:
         and save the updated DataFrame to a new file.
         """
 
+        print("\nProcessing predictions...")
+
         input_file_path = os.path.join(directory_path, "predictions_input.csv")
         # Assert that the file does not exist
         assert os.path.exists(input_file_path), f"The file {input_file_path} should exist."
@@ -334,17 +336,23 @@ class LLM:
         if os.path.exists(output_file_path):
             os.remove(output_file_path)
 
-
-
-
         # Initialize model and tokenizer once, outside the loop
         LLM._initialize_model_and_tokenizer()
 
+        #
+        # Predictions
+        #
     
         print(f"\nProcessing {input_file_path}...")
 
         # Read the CSV file into a DataFrame
         df = pd.read_csv(input_file_path)
+
+        # Get the 'Date' column value from the first row of df
+        date_value = df['Date'].iloc[0]
+        date_string = date_value[:10]
+        output_file_path = output_file_path.replace('.csv', "_" + date_string + ".csv")
+        # output_file_path.replace('.csv', "_" + date_string + ".csv")
 
         # Ensure the 'Sentence' column exists in the DataFrame
         assert 'Sentence' in df.columns, f"ERROR: 'Sentence' column not found in {input_file_path}."
@@ -356,10 +364,19 @@ class LLM:
         df['PredictedClass'] = predictions
 
 
+        # Delete the 'Sentence' column from df
+        df.drop('Sentence', axis=1, inplace=True)
 
+        # Sort df in descending order by 'PredictedClass'
+        df.sort_values(by='PredictedClass', ascending=False, inplace=True)
 
+        #
+        # End of Predictions
+        #
 
 
         # Save the updated DataFrame to a new CSV file
         df.to_csv(output_file_path, index=False)
         print(f"Updated file saved to {output_file_path}")
+
+        print("Finished processing predictions.")
