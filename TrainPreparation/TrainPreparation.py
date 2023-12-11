@@ -55,6 +55,16 @@ class TrainPreparation:
         all_gain_values = []
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
+
+            # Checking the last row of the DataFrame
+            last_row = df.iloc[-1]
+
+            # Verify if 'Tomorrow_Gain' in the last row is NaN and remove it if true
+            if pd.isna(last_row['Tomorrow_Gain']):
+                df = df.iloc[:-1]
+            else:
+                print(f"Found 'Tomorrow_Gain' in the last row: {last_row}")
+
             all_gain_values += df['Tomorrow_Gain'].tolist()
         return all_gain_values
 
@@ -88,8 +98,13 @@ class TrainPreparation:
         for file in files:
             df = pd.read_csv(os.path.join(self.data_dir, file))
             
+            # Remove and save the last row
             last_row = df.tail(1)
-            print(f"Date: {last_row['Date']}")
+            # date = last_row['Date']
+            # print(f"\nDate: {date}")
+
+            # Remove the last row.
+            df = df.iloc[:-1]
 
 
             # Remove '_sentences' from filename if it exists
@@ -100,11 +115,6 @@ class TrainPreparation:
             df = df[selected_columns]
             df['Sentence'] = df['Sentence'].astype(str)
             df['Gain'] = df['Gain'].astype(str)
-            # print(df.dtypes)
-
-            # last_row = df.tail(1)
-            # print(last_row['Date'])
-            # print(f'args.predict_start_time: {args.predict_start_time}')
 
             # Only take the train data.
             df_train = df[df['Date'] < args.predict_start_time].copy()
