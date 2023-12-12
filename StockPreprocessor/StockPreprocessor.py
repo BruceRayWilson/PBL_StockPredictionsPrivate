@@ -24,6 +24,9 @@ class StockPreprocessor:
         return files
 
     def preprocess_file(self, file):
+        # Print the file name
+        print(f"\nPreprocessing {file}")
+
         # Read CSV file
         df = pd.read_csv(os.path.join(self.input_directory, file))
 
