@@ -62,7 +62,8 @@ class BackTesting:
             if os.path.exists(file_path):
                 test_data_df = pd.read_csv(file_path)
                 merged_df = prediction_df[prediction_df['Symbol'] == symbol].merge(test_data_df, on='Date')
-                combined_data = pd.concat([combined_data, merged_df[['Date', 'PredictedClass', 'Gain']]])
+                merged_df['Gain'] = merged_df['Gain'].astype(int)
+                combined_data = pd.concat([combined_data, merged_df[['Date', 'Symbol', 'Date', 'Gain', 'PredictedClass']]])
         return combined_data
 
     @staticmethod
