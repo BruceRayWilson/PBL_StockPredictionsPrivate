@@ -103,9 +103,13 @@ class PredictionResults:
         # Subtract 1 from 'PercentGain' in the local copy
         local_df['PercentGain'] -= 1
 
+        # Calculate the average stock gain
+        average_gain = local_df['PercentGain'].mean()
+        average_gain *= 100
+
         plt.figure(figsize=(12, 8))
         plt.bar(local_df['Symbol'], local_df['PercentGain'], color='blue')
-        plt.title('Percent Gain of Different Stocks on a Specific Day')
+        plt.title(f'Average Stock Gain: {average_gain:.2f}%\nPercent Gain of Different Stocks on a Specific Day')
         plt.xlabel('Symbol')
         plt.ylabel('Percent Gain')
         plt.xticks(rotation=90)  # Rotates the x-axis labels for better readability
