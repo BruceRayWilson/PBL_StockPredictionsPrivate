@@ -178,7 +178,7 @@ def menu(args, config) -> None:
             if subchoice == '1':
                 LLM.train()
             elif subchoice == '2':
-                # LLM.predict()
+                LLM.predict()
                 LLM.true_predict()
 
 if __name__ == "__main__":
