@@ -2,6 +2,7 @@ from datasets import load_dataset
 from trl import SFTTrainer
 from peft import LoraConfig
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import DistilBertTokenizerFast
 import torch
 
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
