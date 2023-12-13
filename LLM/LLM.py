@@ -41,14 +41,6 @@ class LLM:
         if os.path.isdir("results"):
             shutil.rmtree("results")
 
-        # peft_config = LoraConfig(
-        #     r=16,
-        #     lora_alpha=32,
-        #     lora_dropout=0.05,
-        #     bias='none',
-        #     task_type='CASUAL_LM',
-        # )
-
         data_path = "master_train_data/master.csv" #@param {type:"string"}
         text_column_name = "Sentence" #@param {type:"string"}
         label_column_name = "Gain" #@param {type:"string"}
