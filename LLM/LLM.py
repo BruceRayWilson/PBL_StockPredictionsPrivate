@@ -63,11 +63,12 @@ class LLM:
         train_dataset = Dataset.from_pandas(df_train)
         test_dataset  = Dataset.from_pandas(df_test)
 
-        # Tokenizer
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # Tokenizer updated to DistilBertTokenizerFast
+        tokenizer = DistilBertTokenizerFast.from_pretrained(model_name)
 
+        # Updated preprocess_function to use tokenizer.__call__ method for better performance
         def preprocess_function(examples):
-            return tokenizer(examples[text_column_name], truncation=True)
+            return tokenizer(examples[text_column_name], truncation=True, padding=True)
 
         tokenized_train = train_dataset.map(preprocess_function, batched=True)
         tokenized_test = test_dataset.map(preprocess_function, batched=True)
