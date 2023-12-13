@@ -90,7 +90,7 @@ You are allowed to create additional classes if you deem it necessary.
 9. Save the dataframe to a CSV file after processing all of the rows in the first data frame.
 10. Calculate the percentage of the 'PredictedClass' column that matches the 'Gain' column.  Both are now in the second data frame.
 11. Print the percentage of the 'PredictedClass' column that matches the 'Gain' column.
-
+12. Call BackTesting.Exec() to check the stock data prediction results.
 
 # Expected Input
 Use the selected CSV files.  The files contains the stock data.

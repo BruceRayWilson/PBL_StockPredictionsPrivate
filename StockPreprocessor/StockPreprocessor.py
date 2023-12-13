@@ -21,6 +21,7 @@ class StockPreprocessor:
 
     def load_csv_files(self):
         files = [f for f in os.listdir(self.input_directory) if f.endswith('.csv')]
+        files.sort()  # This will sort the files in alphabetical order
         return files
 
     def preprocess_file(self, file):

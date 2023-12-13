@@ -33,7 +33,8 @@ class StockSymbolCollection:
         Returns:
         List[str]: List of stock tickers.
         """
-        df = pd.read_csv(csv_filename)
+        # Explicitly specifying that the first row is the header
+        df = pd.read_csv(csv_filename, header=0)
         
         # Assuming the tickers are in the first column.
         tickers = df.iloc[:, 0].tolist()
