@@ -1,5 +1,7 @@
 import os
 import pandas as pd
+import shutil
+
 from sklearn.preprocessing import MinMaxScaler
 
 from config_loader import load_config
@@ -16,6 +18,11 @@ class StockPreprocessor:
         self.rolling_windows = self.config['rolling_windows']
 
     def create_output_directory(self):
+
+        # Verify that 'results' is a directory and delete it if it exists
+        if os.path.isdir(self.output_directory):
+            shutil.rmtree(self.output_directory)
+
         if not os.path.exists(self.output_directory):
             os.makedirs(self.output_directory)
 

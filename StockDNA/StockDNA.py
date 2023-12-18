@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import multiprocessing
+import shutil
 
 class StockDNA:
     num_days = 7
@@ -24,9 +25,17 @@ class StockDNA:
         # Get a list of all CSV files in the input directory
         csv_files = [file for file in os.listdir(StockDNA.input_dir) if file.endswith('.csv')]
 
+        # Verify that 'processed_data' is a directory and delete it if it exists
+        if os.path.isdir(StockDNA.output_dir_data):
+            shutil.rmtree(StockDNA.output_dir_data)
+
         # Create the 'processed_data' directory if it doesn't exist
         if not os.path.exists(StockDNA.output_dir_data):
             os.makedirs(StockDNA.output_dir_data)
+
+        # Verify that 'processed_sentences' is a directory and delete it if it exists
+        if os.path.isdir(StockDNA.output_dir_sentences):
+            shutil.rmtree(StockDNA.output_dir_sentences)
 
         # Create the 'processed_sentences' directory if it doesn't exist
         if not os.path.exists(StockDNA.output_dir_sentences):

@@ -47,6 +47,7 @@ class LLM:
         label_column_name = "Gain" #@param {type:"string"}
 
         model_name = "distilbert-base-uncased" #@param {type:"string"}
+        # model_name = "Zamachi/RoBERTa-for-multilabel-sentence-classification" #@param {type:"string"}
         test_size = 0.2 #@param {type:"number"}
         num_labels = 6 #@param {type:"number"}
 
@@ -89,7 +90,7 @@ class LLM:
 
         training_args = TrainingArguments(
             output_dir="./results",
-            learning_rate=2e-4,
+            learning_rate=1e-4,
             per_device_train_batch_size=256,
             per_device_eval_batch_size=256,
             num_train_epochs=1,

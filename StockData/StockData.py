@@ -53,6 +53,11 @@ class StockData:
             symbol_ticker = yf.Ticker(symbol)
             # self.end_time = None
             df_symbol = symbol_ticker.history(start=self.start_time, end=self.end_time)
+
+            if len(df_symbol) <= 1:
+                print(f"len(df_symbol): {len(df_symbol)}")
+                input("Press any key to continue...")
+                
             df_symbol.to_csv(filepath)
 
         # Read the data from the CSV file
